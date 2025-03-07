@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Search Results for "{{ query }}"{% endblock %}
+
+{% block header_title %}Search Results{% endblock %}
+{% block header_subtitle %}Results for "{{ query }}"{% endblock %}
+
+{% block content %}
+<div class="search-results-wrapper">
+    {% if results %}
+        <p class="results-count">Found {{ results|length }} duas matching your search</p>
+        <div class="duas-grid">
+            {% for dua in results %}
+                <div class="dua-card">
+                    <h3 class="dua-title">{{ dua.title }}</h3>
+                    <div class="dua-arabic">{{ dua.arabic }}</div>
+                    <div class="dua-audio">
+                        <audio controls>
+                            <source src="{{ url_for('static', filename='audio/' + dua.audio_file) }}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <button class="play-button" data-audio="{{ url_for('static', filename='audio/' + dua.audio_file) }}">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="dua-categories">
+                        {% for cat in dua.categories %}
+                            <a href="{{ url_for('category', category_name=cat) }}" class="category-tag">{{ cat }}</a>
+                        {% endfor %}
+                    </div>
+                    <a href="{{ url_for('dua_detail', dua_id=dua.id) }}" class="btn btn-outline">View Details</a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="no-results">
+            <i class="fas fa-search fa-3x"></i>
+            <h3>No results found for "{{ query }}"</h3>
+            <p>Try searching for different terms or browse categories below</p>
+            <div class="search-suggestions">
+                <h4>Try these popular categories:</h4>
+                <div class="suggestion-tags">
+                    <a href="/category/morning" class="category-tag">Morning</a>
+                    <a href="/category/evening" class="category-tag">Evening</a>
+                    <a href="/category/prayer" class="category-tag">Prayer</a>
+                    <a href="/category/protection" class="category-tag">Protection</a>
+                    <a href="/category/ramadan" class="category-tag">Ramadan</a>
+                    <a href="/all-duas" class="btn btn-primary">Browse All Duas</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

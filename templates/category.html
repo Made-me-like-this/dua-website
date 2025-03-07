@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Islamic Duas - {{ category }}{% endblock %}
+
+{% block header_title %}{{ category | capitalize }} Duas{% endblock %}
+{% block header_subtitle %}Collection of duas related to {{ category }}{% endblock %}
+
+{% block content %}
+<div class="category-wrapper">
+    <div class="duas-grid">
+        {% for dua in duas %}
+            <div class="dua-card">
+                <h3 class="dua-title">{{ dua.title }}</h3>
+                <div class="dua-arabic">{{ dua.arabic }}</div>
+                <div class="dua-transliteration">
+                    <h4>Transliteration:</h4>
+                    <p>{{ dua.transliteration }}</p>
+                </div>
+                <div class="dua-translation">
+                    <h4>Translation:</h4>
+                    <p>{{ dua.translation }}</p>
+                </div>
+                <div class="dua-audio">
+                    <audio controls>
+                        <source src="{{ url_for('static', filename='audio/' + dua.audio_file) }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-button" data-audio="{{ url_for('static', filename='audio/' + dua.audio_file) }}">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                <div class="dua-reference">
+                    <small>Reference: {{ dua.reference }}</small>
+                </div>
+                <div class="dua-categories">
+                    {% for cat in dua.categories %}
+                        <a href="{{ url_for('category', category_name=cat) }}" class="category-tag">{{ cat }}</a>
+                    {% endfor %}
+                </div>
+                <a href="{{ url_for('dua_detail', dua_id=dua.id) }}" class="btn btn-outline">View Details</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

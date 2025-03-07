@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block header_title %}404 - Page Not Found{% endblock %}
+{% block header_subtitle %}The page you are looking for does not exist{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <i class="fas fa-exclamation-circle fa-5x"></i>
+    <h2>Page Not Found</h2>
+    <p>Sorry, the page you are looking for might have been removed or is temporarily unavailable.</p>
+    <div class="error-actions">
+        <a href="/" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+        <a href="/all-duas" class="btn btn-outline"><i class="fas fa-book-open"></i> Browse Duas</a>
+    </div>
+</div>
+{% endblock %}
