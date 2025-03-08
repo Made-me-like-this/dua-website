@@ -20,13 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Toggle max-height for smooth animation
             if (contentElement.classList.contains('active')) {
-                contentElement.style.maxHeight = contentElement.scrollHeight + 'px';
+                // Use a large value to ensure content shows fully
+                contentElement.style.maxHeight = '10000px';
             } else {
                 contentElement.style.maxHeight = '0';
             }
 
             // Close other sections (optional)
-            // closeOtherSections(targetId);
+            closeOtherSections(targetId);
         });
     });
 
@@ -50,7 +51,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Toggle max-height for smooth animation
             if (contentElement.classList.contains('active')) {
-                contentElement.style.maxHeight = contentElement.scrollHeight + 'px';
+                // Use a large value to ensure content shows fully
+                contentElement.style.maxHeight = '10000px';
+
+                // Also update parent section's max-height to accommodate this card
+                const parentSection = this.closest('.learn-section');
+                if (parentSection) {
+                    const parentContent = parentSection.querySelector('.learn-section-content');
+                    if (parentContent && parentContent.classList.contains('active')) {
+                        parentContent.style.maxHeight = '10000px';
+                    }
+                }
             } else {
                 contentElement.style.maxHeight = '0';
             }
@@ -154,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const chevronIcon = cardHeader.querySelector('.fa-chevron-down');
 
             cardContent.classList.add('active');
-            cardContent.style.maxHeight = cardContent.scrollHeight + 'px';
+            cardContent.style.maxHeight = '10000px';
             chevronIcon.classList.add('rotate');
         }
 
@@ -166,12 +177,18 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionChevron = sectionHeader.querySelector('.fa-chevron-down');
 
             sectionContent.classList.add('active');
-            sectionContent.style.maxHeight = sectionContent.scrollHeight + 'px';
+            sectionContent.style.maxHeight = '10000px';
             sectionChevron.classList.add('rotate');
             parentSection.classList.add('active');
         }
     }
+
+    // Chat bubble functionality
+    const chatBubble = document.querySelector('.chat-bubble');
+    const chatWindow = document.querySelector('.chat-window');
+    if (chatBubble && chatWindow) {
+        chatBubble.addEventListener('click', () => {
+            chatWindow.classList.toggle('visible');
+        });
+    }
 });
-const chatBubble = document.querySelector('.chat-bubble');
-const chatWindow = document.querySelector('.chat-window');
-chatBubble.addEventListener('click', () => { chatWindow.classList.toggle('visible'); });
