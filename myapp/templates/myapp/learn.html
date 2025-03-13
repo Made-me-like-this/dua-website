@@ -1,0 +1,1868 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Learn About Islam and Duas{% endblock %}
+
+{% block content %}
+<div class="hero-section" style="background-color: #0275d8;">
+    <div class="container text-center">
+        <h1><i class="fas fa-graduation-cap me-3"></i>Learn About Islam</h1>
+        <p class="lead">Understanding the fundamentals of Islam and the importance of duas</p>
+    </div>
+</div>
+
+<div class="container mt-4 mb-5">
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <div class="d-flex justify-content-end mb-3">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary active" id="basicModeBtn">Basic Mode</button>
+                    <button type="button" class="btn btn-outline-primary" id="advancedModeBtn">Advanced Mode</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Fundamentals of Islam Section -->
+            <div class="card mb-4 basic-content">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0 fs-4">1. Fundamentals of Islam</h2>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="fundamentalsAccordion">
+                        <!-- Five Pillars -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingPillars">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePillars" aria-expanded="true" aria-controls="collapsePillars">
+                                    The Five Pillars of Islam
+                                </button>
+                            </h3>
+                            <div id="collapsePillars" class="accordion-collapse collapse show" aria-labelledby="headingPillars" data-bs-parent="#fundamentalsAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>The Five Pillars of Islam are the five basic acts of worship that are mandatory for all Muslims:</p>
+                                        <ol>
+                                            <li><strong>Shahada (Faith):</strong> Declaring there is no god except Allah, and Muhammad is the messenger of Allah.</li>
+                                            <li><strong>Salah (Prayer):</strong> Performing the five daily prayers.</li>
+                                            <li><strong>Zakat (Charity):</strong> Giving a portion of one's wealth to those in need.</li>
+                                            <li><strong>Sawm (Fasting):</strong> Fasting during the month of Ramadan.</li>
+                                            <li><strong>Hajj (Pilgrimage):</strong> Making the pilgrimage to Mecca once in a lifetime if able.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="basic-content" style="display: none;">
+                                        <p>The Five Pillars of Islam form the foundation of Muslim life. Each pillar carries deep spiritual significance:</p>
+
+                                        <h4>1. Shahada (Declaration of Faith)</h4>
+                                        <p>The declaration, "There is no god but Allah, and Muhammad is the Messenger of Allah" (Lā ʾilāha ʾillā llāh, Muḥammadun rasūlu llāh), represents the absolute monotheism of Islam and acceptance of Muhammad's prophethood. It's the gateway to becoming a Muslim.</p>
+
+                                        <h4>2. Salah (Prayer)</h4>
+                                        <p>Muslims pray five times daily: Fajr (dawn), Dhuhr (noon), Asr (afternoon), Maghrib (sunset), and Isha (night). Prayer involves physical movements that symbolize submission to Allah and recitation of Quranic verses. It serves as a regular reminder of one's relationship with Allah and provides spiritual rejuvenation.</p>
+
+                                        <h4>3. Zakat (Charitable Giving)</h4>
+                                        <p>Zakat is an annual 2.5% payment from one's wealth to those in need. It purifies wealth, prevents hoarding, and establishes economic justice. Recipients include the poor, debtors, travelers in need, and those dedicated to religious service.</p>
+
+                                        <h4>4. Sawm (Fasting)</h4>
+                                        <p>During Ramadan (the ninth month of the Islamic calendar), Muslims abstain from food, drink, and marital relations from dawn until sunset. Fasting teaches self-discipline, empathy for the hungry, and heightens spiritual awareness. It's a time for increased prayer, charity, and Quran recitation.</p>
+
+                                        <h4>5. Hajj (Pilgrimage)</h4>
+                                        <p>The annual pilgrimage to Mecca must be performed once in a lifetime if physically and financially able. Hajj symbolizes unity of believers, as millions gather in identical white garments, removing distinctions of class, wealth, and status. It commemorates the actions of Prophet Ibrahim (Abraham) and his family.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Six Articles of Faith -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingArticles">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArticles" aria-expanded="false" aria-controls="collapseArticles">
+                                    The Six Articles of Faith
+                                </button>
+                            </h3>
+                            <div id="collapseArticles" class="accordion-collapse collapse" aria-labelledby="headingArticles" data-bs-parent="#fundamentalsAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>The Six Articles of Faith (Iman) are the core beliefs that Muslims must adhere to:</p>
+                                        <ol>
+                                            <li><strong>Belief in Allah:</strong> The One and Only God.</li>
+                                            <li><strong>Belief in Angels:</strong> Created by Allah to serve Him.</li>
+                                            <li><strong>Belief in Divine Books:</strong> Including the Quran, Torah, Gospel, and Psalms.</li>
+                                            <li><strong>Belief in Prophets:</strong> Including Adam, Noah, Abraham, Moses, Jesus, and Muhammad.</li>
+                                            <li><strong>Belief in the Day of Judgment:</strong> When all souls will be judged.</li>
+                                            <li><strong>Belief in Divine Decree:</strong> That Allah has knowledge and control over all things.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="basic-content" style="display: none;">
+                                        <p>The Six Articles of Faith form the theological foundation of a Muslim's belief system:</p>
+
+                                        <h4>1. Belief in Allah (Tawhid)</h4>
+                                        <p>Muslims believe in one, unique, incomparable God who has no son nor partner. Allah is the Creator, Sustainer, and Provider of the universe. He is described through 99 beautiful names (Asma ul-Husna) that reflect His attributes like the Most Merciful (Ar-Rahman), the Most Wise (Al-Hakeem), and the Most Just (Al-Adl).</p>
+
+                                        <h4>2. Belief in Angels (Mala'ika)</h4>
+                                        <p>Angels are created from light (nur) and serve Allah without disobedience. Major angels include Jibreel (Gabriel) who delivered revelation, Mikael (Michael) who controls provision, Israfil who will blow the trumpet on Judgment Day, and Izrael, the angel of death. Others include Munkar and Nakir who question souls in graves, and Raqib and Atid who record deeds.</p>
+
+                                        <h4>3. Belief in Divine Books (Kutub)</h4>
+                                        <p>Muslims believe Allah revealed books to His messengers as guidance. These include the Scrolls of Abraham (Suhuf), the Torah given to Moses (Tawrat), the Psalms given to David (Zabur), the Gospel given to Jesus (Injil), and the Quran revealed to Muhammad. Muslims believe only the Quran remains in its original, unaltered form.</p>
+
+                                        <h4>4. Belief in Prophets (Rusul)</h4>
+                                        <p>Allah sent prophets to every nation to guide humanity. Twenty-five are mentioned by name in the Quran, including Adam, Noah (Nuh), Abraham (Ibrahim), Moses (Musa), Jesus (Isa), and Muhammad. Muslims believe Muhammad is the final prophet, the "Seal of the Prophets," whose message is universal for all humanity until the Day of Judgment.</p>
+
+                                        <h4>5. Belief in the Day of Judgment (Yawm al-Qiyamah)</h4>
+                                        <p>Life on earth is a test, and after death comes resurrection and judgment. Each person's deeds will be weighed, determining eternal destination in Paradise (Jannah) or Hell (Jahannam). The Quran describes signs preceding the Day of Judgment and its terrifying events in detail.</p>
+
+                                        <h4>6. Belief in Divine Decree (Qadar)</h4>
+                                        <p>Allah has full knowledge and power over all things. While Allah knows what choices humans will make, humans have free will and are responsible for their actions. This concept balances divine sovereignty with human accountability, teaching that while circumstances may be predestined, how one responds to them is a matter of choice.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tawheed -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTawheed">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTawheed" aria-expanded="false" aria-controls="collapseTawheed">
+                                    The Concept of Tawheed (Oneness of Allah)
+                                </button>
+                            </h3>
+                            <div id="collapseTawheed" class="accordion-collapse collapse" aria-labelledby="headingTawheed" data-bs-parent="#fundamentalsAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>Tawheed is the central concept in Islam that refers to the absolute oneness of Allah. It means believing in:</p>
+                                        <ul>
+                                            <li>One God who has no partners or equals</li>
+                                            <li>God alone deserves worship</li>
+                                            <li>God is unique in His names and attributes</li>
+                                        </ul>
+                                        <p>Maintaining pure Tawheed means rejecting all forms of idolatry and polytheism.</p>
+                                    </div>
+                                    <div class="basic-content" style="display: none;">
+                                        <p>Tawheed (monotheism) is the foundational principle of Islam and is divided into three categories:</p>
+
+                                        <h4>1. Tawheed ar-Rububiyyah (Oneness of Lordship)</h4>
+                                        <p>This affirms that Allah alone is the Creator, Sustainer, and Controller of the universe. He causes life and death, provides sustenance, controls weather patterns, and manages all affairs. The Quran states: "Allah is the Creator of all things, and He is the Guardian over all things" (39:62).</p>
+
+                                        <h4>2. Tawheed al-Uluhiyyah (Oneness of Worship)</h4>
+                                        <p>This mandates that all acts of worship must be directed solely to Allah. Prayers, supplications, sacrifices, vows, seeking help in distress, and all religious rituals must be performed for Allah alone. Directing any form of worship to other than Allah constitutes shirk (polytheism), which is the gravest sin in Islam. The Quran emphasizes: "And worship Allah and associate nothing with Him" (4:36).</p>
+
+                                        <h4>3. Tawheed al-Asma wa-Sifat (Oneness of Names and Attributes)</h4>
+                                        <p>This involves affirming the names and attributes that Allah has affirmed for Himself in the Quran or through His Prophet, without distortion, denial, questioning their nature, or anthropomorphism. Allah describes Himself: "There is nothing like unto Him, and He is the All-Hearer, the All-Seer" (42:11).</p>
+
+                                        <p>The opposite of Tawheed is Shirk (associating partners with Allah), which has various forms:</p>
+                                        <ul>
+                                            <li><strong>Major Shirk:</strong> Worshipping others alongside Allah, which nullifies one's faith if not repented from</li>
+                                            <li><strong>Minor Shirk:</strong> Actions that may lead to major shirk, such as swearing by other than Allah or showing off in worship</li>
+                                            <li><strong>Hidden Shirk:</strong> Subtle forms of showing off or having intentions other than pleasing Allah in acts of worship</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- The Quran -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingQuran">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuran" aria-expanded="false" aria-controls="collapseQuran">
+                                    The Quran and Its Importance
+                                </button>
+                            </h3>
+                            <div id="collapseQuran" class="accordion-collapse collapse" aria-labelledby="headingQuran" data-bs-parent="#fundamentalsAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>The Quran is the holy book of Islam and Muslims believe it is:</p>
+                                        <ul>
+                                            <li>The literal word of Allah revealed to Prophet Muhammad</li>
+                                            <li>Preserved exactly as it was revealed over 1400 years ago</li>
+                                            <li>A complete guide for humanity covering all aspects of life</li>
+                                            <li>Divided into 114 chapters (surahs) of varying lengths</li>
+                                        </ul>
+                                        <p>Muslims are encouraged to read, understand, and implement the Quran's teachings in their daily lives.</p>
+                                    </div>
+                                    <div class="basic-content" style="display: none;">
+                                        <h4>The Revelation and Compilation of the Quran</h4>
+                                        <p>The Quran was revealed to Prophet Muhammad ﷺ over 23 years (610-632 CE) through the Angel Jibreel (Gabriel). The first revelation came in the Cave of Hira with the words "Read! In the name of your Lord who created" (96:1).</p>
+
+                                        <p>During the Prophet's lifetime, the Quran was preserved through:</p>
+                                        <ul>
+                                            <li><strong>Memorization:</strong> The Prophet and his Companions memorized the Quran as it was revealed</li>
+                                            <li><strong>Written records:</strong> Scribes wrote down revelations on various materials like parchment and bone</li>
+                                        </ul>
+
+                                        <p>After the Prophet's death, the first Caliph Abu Bakr ordered the compilation of the Quran into one manuscript. Later, during Uthman's caliphate, standardized copies were made and distributed to major Muslim centers, establishing a uniform text that has remained unchanged.</p>
+
+                                        <h4>Structure and Content</h4>
+                                        <p>The Quran contains 114 surahs arranged roughly by length (except for Al-Fatiha, the opening chapter). It is also divided into 30 equal parts (juz') to facilitate reading during Ramadan.</p>
+
+                                        <p>Major themes include:</p>
+                                        <ul>
+                                            <li><strong>Theology:</strong> Oneness of God, His attributes, creation, angels</li>
+                                            <li><strong>Prophets and their stories:</strong> Adam, Noah, Abraham, Moses, Jesus, and others</li>
+                                            <li><strong>Ethical and moral teachings:</strong> Justice, kindness, honesty, family relations</li>
+                                            <li><strong>Legal rulings:</strong> Inheritance, marriage, business transactions</li>
+                                            <li><strong>Eschatology:</strong> Death, resurrection, judgment, paradise, hellfire</li>
+                                            <li><strong>Scientific signs:</strong> References to natural phenomena consistent with modern scientific discoveries</li>
+                                        </ul>
+
+                                        <h4>Miracle of the Quran</h4>
+                                        <p>Muslims believe the Quran is miraculous in several ways:</p>
+                                        <ul>
+                                            <li><strong>Linguistic excellence:</strong> Unmatched literary style and eloquence</li>
+                                            <li><strong>Scientific accuracy:</strong> Descriptions of natural phenomena unknown at the time of revelation</li>
+                                            <li><strong>Historical accuracy:</strong> Correct accounts of past events</li>
+                                            <li><strong>Prophecies:</strong> Future events that later occurred</li>
+                                            <li><strong>Preservation:</strong> Unchanged text for over 1400 years</li>
+                                            <li><strong>Comprehensive guidance:</strong> Complete system covering spiritual, moral, social, and legal dimensions</li>
+                                        </ul>
+
+                                        <p>The Quran challenges humanity: "And if you are in doubt about what We have sent down upon Our Servant, then produce a surah the like thereof and call upon your witnesses other than Allah, if you should be truthful" (2:23)—a challenge that remains unmet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card mb-4 basic-content">
+                <div class="card-header bg-secondary text-white">
+                    <h2 class="mb-0 fs-4">2. Practical Worship Guide</h2>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="worshipAccordion">
+                        <!-- Wudu Guide -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingWudu">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWudu" aria-expanded="true" aria-controls="collapseWudu">
+                                    Performing Wudu (Ablution)
+                                </button>
+                            </h3>
+                            <div id="collapseWudu" class="accordion-collapse collapse show" aria-labelledby="headingWudu" data-bs-parent="#worshipAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>Wudu is the Islamic ritual washing performed before prayer and certain other acts of worship. Here's how to perform it:</p>
+                                        <ol>
+                                            <li><strong>Niyyah (Intention):</strong> Make the intention to perform wudu for prayer</li>
+                                            <li><strong>Washing hands:</strong> Wash both hands up to the wrists three times</li>
+                                            <li><strong>Rinsing mouth:</strong> Take water into the mouth and rinse it three times</li>
+                                            <li><strong>Cleaning nose:</strong> Sniff water into the nostrils and blow it out three times</li>
+                                            <li><strong>Washing face:</strong> Wash the entire face from forehead to chin and ear to ear three times</li>
+                                            <li><strong>Washing arms:</strong> Wash both arms including the elbows three times, starting with the right</li>
+                                            <li><strong>Wiping the head:</strong> With wet hands, wipe over the head from front to back</li>
+                                            <li><strong>Wiping the ears:</strong> Using wet fingers, clean the inside and outside of both ears</li>
+                                            <li><strong>Washing feet:</strong> Wash both feet including the ankles three times, starting with the right</li>
+                                        </ol>
+                                        <p>After completing wudu, it is recommended to recite: "Ash-hadu an laa ilaaha illallah, wa ash-hadu anna Muhammadan 'abduhu wa rasuluhu" (I bear witness that there is no deity but Allah, and I bear witness that Muhammad is His servant and messenger).</p>
+                                    </div>
+
+                                    <div class="basic-content" style="display: none;">
+                                        <h4>Requirements and Detailed Steps of Wudu</h4>
+
+                                        <h5>Conditions for Valid Wudu</h5>
+                                        <ul>
+                                            <li>Being Muslim</li>
+                                            <li>Being of sound mind</li>
+                                            <li>Using clean, pure water</li>
+                                            <li>Ensuring there is nothing preventing water from reaching the skin</li>
+                                            <li>Ensuring the body parts being washed are clean</li>
+                                        </ul>
+
+                                        <h5>Detailed Steps with Sunnah Actions</h5>
+                                        <ol>
+                                            <li><strong>Saying "Bismillah" (In the name of Allah)</strong> before beginning</li>
+                                            <li><strong>Washing hands three times</strong>, including between the fingers</li>
+                                            <li><strong>Rinsing the mouth thoroughly three times</strong>, using the right hand to take water</li>
+                                            <li><strong>Cleaning the nose three times</strong>, using the right hand to take water and the left to expel it</li>
+                                            <li><strong>Washing the entire face three times</strong>, from hairline to chin and ear to ear, making sure water reaches all parts including around the eyes and nose</li>
+                                            <li><strong>Washing the arms three times</strong>, starting from fingertips up to and including the elbows, beginning with the right arm</li>
+                                            <li><strong>Wiping the entire head once</strong>, by wetting both hands and passing them from the front of the head to the nape of the neck and back</li>
+                                            <li><strong>Wiping both ears</strong>, using the index fingers for the inside and thumbs for the outside</li>
+                                            <li><strong>Washing both feet three times</strong>, including the ankles and between the toes, starting with the right foot</li>
+                                            <li><strong>Performing the acts in sequence</strong> without long pauses between them</li>
+                                        </ol>
+
+                                        <h5>Actions That Invalidate Wudu</h5>
+                                        <ul>
+                                            <li>Natural discharges: urine, stool, gas, etc.</li>
+                                            <li>Deep sleep while lying down</li>
+                                            <li>Loss of consciousness</li>
+                                            <li>Touching the private parts directly without a barrier</li>
+                                            <li>Apostasy (leaving Islam)</li>
+                                        </ul>
+
+                                        <h5>Etiquettes of Wudu</h5>
+                                        <ul>
+                                            <li>Facing the qiblah (direction of Kaaba)</li>
+                                            <li>Not speaking unnecessarily during wudu</li>
+                                            <li>Not wasting water</li>
+                                            <li>Making du'a after completing wudu</li>
+                                            <li>Performing two rak'ah of prayer after wudu when possible</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ghusl Guide -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingGhusl">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGhusl" aria-expanded="false" aria-controls="collapseGhusl">
+                                    Performing Ghusl (Full Bath)
+                                </button>
+                            </h3>
+                            <div id="collapseGhusl" class="accordion-collapse collapse" aria-labelledby="headingGhusl" data-bs-parent="#worshipAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>Ghusl is the full ritual bath required after certain events, such as sexual intercourse or the completion of menstruation. Here is how to perform it:</p>
+
+                                        <ol>
+                                            <li><strong>Niyyah (Intention):</strong> Make the intention to perform ghusl</li>
+                                            <li><strong>Washing hands:</strong> Begin by washing both hands up to the wrists three times</li>
+                                            <li><strong>Washing private parts:</strong> Clean the private parts thoroughly with water</li>
+                                            <li><strong>Performing wudu:</strong> Complete a full wudu as you would for prayer</li>
+                                            <li><strong>Pouring water over head:</strong> Pour water over the head three times, ensuring it reaches the roots of the hair</li>
+                                            <li><strong>Washing the body:</strong> Pour water over the entire body, starting with the right side, then the left, making sure water reaches every part of the body</li>
+                                        </ol>
+
+                                        <p>The minimum requirement for a valid ghusl is that water reaches all parts of the body with the intention of purification.</p>
+                                    </div>
+
+                                    <div class="basic-content" style="display: none;">
+                                        <h4>Comprehensive Guide to Ghusl</h4>
+
+                                        <h5>Situations That Require Ghusl</h5>
+                                        <ul>
+                                            <li><strong>Janabah:</strong> After sexual intercourse or ejaculation</li>
+                                            <li><strong>Menstruation:</strong> After the completion of menstrual bleeding</li>
+                                            <li><strong>Postnatal bleeding:</strong> After postnatal bleeding stops</li>
+                                            <li><strong>Death:</strong> The body of a deceased Muslim must be given ghusl before burial</li>
+                                            <li><strong>Conversion to Islam:</strong> A new Muslim should perform ghusl</li>
+                                        </ul>
+
+                                        <h5>Types of Ghusl</h5>
+                                        <ul>
+                                            <li><strong>Obligatory (Fard):</strong> Required after the situations mentioned above</li>
+                                            <li><strong>Recommended (Sunnah):</strong> Before Friday prayer, for the two Eid prayers, before Hajj rituals, etc.</li>
+                                        </ul>
+
+                                        <h5>Detailed Method According to the Sunnah</h5>
+                                        <ol>
+                                            <li>Make the intention (niyyah) in your heart</li>
+                                            <li>Say "Bismillah" (In the name of Allah)</li>
+                                            <li>Wash both hands up to the wrists three times</li>
+                                            <li>Wash the private parts thoroughly with the left hand</li>
+                                            <li>Perform a complete wudu as you would for prayer (except for washing the feet, which can be done at the end)</li>
+                                            <li>Pour water over the head three times, making sure it reaches the roots of the hair</li>
+                                            <li>Pour water over the right shoulder three times, ensuring it flows over the entire right side</li>
+                                            <li>Pour water over the left shoulder three times, ensuring it flows over the entire left side</li>
+                                            <li>Wash any part of the body that might have been missed, especially hard-to-reach areas like between toes, inside the navel, behind the ears, etc.</li>
+                                            <li>If not already done during wudu, wash the feet including the ankles</li>
+                                        </ol>
+
+                                        <h5>Things to Avoid During State of Major Impurity (Before Ghusl)</h5>
+                                        <ul>
+                                            <li>Offering prayers (salah)</li>
+                                            <li>Touching or reciting the Quran</li>
+                                            <li>Staying in a mosque</li>
+                                            <li>Circumambulating the Kaaba (tawaf)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Breaking Wudu -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingBreakWudu">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBreakWudu" aria-expanded="false" aria-controls="collapseBreakWudu">
+                                    What Breaks Wudu
+                                </button>
+                            </h3>
+                            <div id="collapseBreakWudu" class="accordion-collapse collapse" aria-labelledby="headingBreakWudu" data-bs-parent="#worshipAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>The following actions require you to renew your wudu before prayer:</p>
+
+                                        <ul>
+                                            <li>Anything that exits from the front or back passages (urine, stool, gas, etc.)</li>
+                                            <li>Deep sleep where one loses awareness</li>
+                                            <li>Losing consciousness through fainting, intoxication, or anesthesia</li>
+                                            <li>Directly touching one's private parts without a barrier</li>
+                                            <li>Bleeding or discharge that flows from the body</li>
+                                        </ul>
+
+                                        <p>If any of these occur after you have performed wudu, you must make a new wudu before praying.</p>
+                                    </div>
+
+                                    <div class="basic" style="display: none;">
+                                        <h4>Detailed Analysis of Actions That Invalidate Wudu</h4>
+
+                                        <h5>Unanimous Nullifiers (Agreed Upon)</h5>
+                                        <ul>
+                                            <li><strong>Natural discharges:</strong> All scholars agree that urine, stool, and gas from the back passage break wudu</li>
+                                            <li><strong>Loss of consciousness:</strong> Whether through sleep, fainting, intoxication, or illness</li>
+                                        </ul>
+
+                                        <h5>Differing Opinions Among Scholars</h5>
+                                        <ul>
+                                            <li><strong>Touching the opposite gender:</strong>
+                                                <ul>
+                                                    <li>Shafi'i school: Touching a non-mahram (marriageable) person of the opposite gender breaks wudu</li>
+                                                    <li>Hanafi school: Mere touching does not break wudu unless there is sexual desire</li>
+                                                    <li>Maliki and Hanbali schools: Have various conditions and exceptions</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Touching private parts:</strong>
+                                                <ul>
+                                                    <li>Some scholars consider it breaks wudu</li>
+                                                    <li>Others say it only breaks wudu if done with desire</li>
+                                                    <li>Some specify it must be direct skin contact without a barrier</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Bleeding or other discharges:</strong>
+                                                <ul>
+                                                    <li>Hanafi school: Flowing blood or pus breaks wudu</li>
+                                                    <li>Other schools: Generally do not consider bleeding as breaking wudu</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Sleeping:</strong>
+                                                <ul>
+                                                    <li>Light sleep while sitting or standing: Generally does not break wudu</li>
+                                                    <li>Deep sleep while lying down: Breaks wudu according to most scholars</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <h5>Actions That Do NOT Break Wudu</h5>
+                                        <ul>
+                                            <li>Eating cooked food</li>
+                                            <li>Laughing (outside of prayer)</li>
+                                            <li>Vomiting a small amount</li>
+                                            <li>Doubts about whether wudu has been broken (certainty is required)</li>
+                                            <li>Washing a deceased person</li>
+                                            <li>Bleeding from a small cut that does not flow</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tayammum -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTayammum">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTayammum" aria-expanded="false" aria-controls="collapseTayammum">
+                                    Performing Tayammum (Dry Ablution)
+                                </button>
+                            </h3>
+                            <div id="collapseTayammum" class="accordion-collapse collapse" aria-labelledby="headingTayammum" data-bs-parent="#worshipAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>Tayammum is the symbolic purification with clean earth or dust when water is unavailable or its use might be harmful (e.g., during illness).</p>
+
+                                        <p><strong>When tayammum is allowed:</strong></p>
+                                        <ul>
+                                            <li>When water is not available</li>
+                                            <li>When using water could worsen an illness or injury</li>
+                                            <li>When water is available but is needed for drinking</li>
+                                            <li>When obtaining water would put one in danger</li>
+                                        </ul>
+
+                                        <p><strong>How to perform tayammum:</strong></p>
+                                        <ol>
+                                            <li>Make the intention for tayammum</li>
+                                            <li>Say "Bismillah" (In the name of Allah)</li>
+                                            <li>Strike both hands lightly on clean earth, sand, or dust</li>
+                                            <li>Blow off excess dust</li>
+                                            <li>Wipe the face with both hands</li>
+                                            <li>Wipe the right arm with the left hand and the left arm with the right hand up to the elbows</li>
+                                        </ol>
+
+                                        <p>Tayammum is invalidated by the same things that invalidate wudu, as well as by finding water or being able to use water again.</p>
+                                    </div>
+
+                                    <div class="basic-content" style="display: none;">
+                                        <h4>Comprehensive Guide to Tayammum</h4>
+
+                                        <h5>Quranic Basis</h5>
+                                        <p>"And if you are ill or on a journey or one of you comes from the place of relieving himself or you have contacted women and find no water, then seek clean earth and wipe over your faces and your hands [with it]. Indeed, Allah is ever Pardoning and Forgiving." (Quran 4:43)</p>
+
+                                        <h5>Detailed Conditions for Tayammum</h5>
+                                        <ol>
+                                            <li><strong>Absence of water:</strong> After making a reasonable search within a radius of approximately 500 meters</li>
+                                            <li><strong>Medical reasons:</strong> With a doctor's confirmation or personal experience that water would harm</li>
+                                            <li><strong>Extreme cold:</strong> When water is available but using it might cause illness due to severe cold and no means of heating is available</li>
+                                            <li><strong>Conservation:</strong> When water is barely sufficient for drinking and cooking</li>
+
+                                            <li><strong>Physical inability:</strong> Being unable to use water due to disability or lack of assistance</li>
+                                        </ol>
+
+                                        <h5>Valid Substances for Tayammum</h5>
+                                        <ul>
+                                            <li>Clean earth or soil</li>
+                                            <li>Sand or dust</li>
+                                            <li>Stone or rock with dust on it</li>
+                                            <li>Walls made of earth, brick, or stone (not painted or varnished)</li>
+                                            <li>Clay or limestone</li>
+                                        </ul>
+
+                                        <h5>Invalid Substances</h5>
+                                        <ul>
+                                            <li>Metal, glass, or plastic surfaces</li>
+                                            <li>Wood or cloth</li>
+                                            <li>Carpets or synthetic materials</li>
+                                            <li>Substances that burn, melt, or can be eaten</li>
+                                            <li>Impure soil (contaminated with impurities)</li>
+                                        </ul>
+
+                                        <h5>Scholarly Differences in Method</h5>
+                                        <ul>
+                                            <li><strong>Number of strikes:</strong> Some scholars recommend one strike, others two</li>
+                                            <li><strong>Extent of wiping:</strong> Different opinions on whether to wipe to the wrists or elbows</li>
+                                            <li><strong>Order:</strong> Most agree on face first, then hands, but some have additional details</li>
+                                        </ul>
+
+                                        <h5>Acts Permitted with Tayammum</h5>
+                                        <p>With tayammum, one may perform all acts of worship that require wudu or ghusl, including:</p>
+                                        <ul>
+                                            <li>Obligatory and voluntary prayers</li>
+                                            <li>Touching and reciting the Quran</li>
+                                            <li>Staying in a mosque</li>
+                                            <li>Funeral prayer</li>
+                                        </ul>
+
+                                        <h5>Limitations</h5>
+                                        <p>Unlike wudu, which remains valid until broken, tayammum becomes invalid when:</p>
+                                        <ul>
+                                            <li>Water becomes available and accessible</li>
+                                            <li>The reason permitting tayammum no longer exists</li>
+                                            <li>Any of the normal nullifiers of wudu occur</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beginning to Read Quran -->
+            <div class="card mb-4 advanced-content" style="display: none;">
+                <div class="card-header bg-info text-white">
+                    <h2 class="mb-0 fs-4">3. Beginning to Read Quran</h2>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="quranAccordion">
+                        <!-- Arabic Alphabet -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingAlphabet">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlphabet" aria-expanded="true" aria-controls="collapseAlphabet">
+                                    Arabic Alphabet and Pronunciation
+                                </button>
+                            </h3>
+                            <div id="collapseAlphabet" class="accordion-collapse collapse show" aria-labelledby="headingAlphabet" data-bs-parent="#quranAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>The Arabic alphabet consists of 28 letters. Here are the basics to get you started:</p>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>Letter</th>
+                                                        <th>Name</th>
+                                                        <th>Pronunciation</th>
+                                                        <th>Similar to</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="arabic-text fs-4">ا</td>
+                                                        <td>Alif</td>
+                                                        <td>A / ā</td>
+                                                        <td>'a' as in 'father'</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="arabic-text fs-4">ب</td>
+                                                        <td>Bā'</td>
+                                                        <td>B</td>
+                                                        <td>'b' as in 'boy'</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="arabic-text fs-4">ت</td>
+                                                        <td>Tā'</td>
+                                                        <td>T</td>
+                                                        <td>'t' as in 'table'</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="arabic-text fs-4">ث</td>
+                                                        <td>Thā'</td>
+                                                        <td>Th</td>
+                                                        <td>'th' as in 'think'</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="arabic-text fs-4">ج</td>
+                                                        <td>Jīm</td>
+                                                        <td>J</td>
+                                                        <td>'j' as in 'jam'</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="arabic-text fs-4">ح</td>
+                                                        <td>Ḥā'</td>
+                                                        <td>Ḥ</td>
+                                                        <td>Heavy 'h' sound from throat</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="arabic-text fs-4">خ</td>
+                                                        <td>Khā'</td>
+                                                        <td>Kh</td>
+                                                        <td>'ch' in Scottish 'loch'</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <p>Arabic is read from right to left, and letters change form depending on their position in a word (beginning, middle, or end).</p>
+
+                                        <p><strong>Helpful Tips:</strong></p>
+                                        <ul>
+                                            <li>Practice writing letters to understand their shapes</li>
+                                            <li>Learn the short vowels (َ  ُ  ِ) which are placed above or below letters</li>
+                                            <li>Listen to recitations to understand correct pronunciation</li>
+                                            <li>Start with recognizing letters before moving to words</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="advanced-content" style="display: none;">
+                                        <h4>Comprehensive Guide to Arabic Alphabet and Phonetics</h4>
+
+                                        <h5>Letter Categories</h5>
+                                        <p>Arabic letters can be categorized by points of articulation:</p>
+
+                                        <ul>
+                                            <li><strong>Throat letters:</strong> ء ه ع ح غ خ</li>
+                                            <li><strong>Tongue letters:</strong> ق ك ج ش ي ل ن ر ط د ت ص س ز ظ ذ ث</li>
+                                            <li><strong>Lip letters:</strong> ف ب م و</li>
+                                        </ul>
+
+                                        <h5>Vowels and Diacritics</h5>
+                                        <ul>
+                                            <li><strong>Short vowels:</strong>
+                                                <ul>
+                                                    <li>Fatha (َ): 'a' sound as in 'cat'</li>
+                                                    <li>Kasra (ِ): 'i' sound as in 'sit'</li>
+                                                    <li>Damma (ُ): 'u' sound as in 'put'</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Long vowels:</strong>
+                                                <ul>
+                                                    <li>Alif (ا): extended 'aa' sound</li>
+                                                    <li>Ya (ي): extended 'ee' sound</li>
+                                                    <li>Waw (و): extended 'oo' sound</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Other marks:</strong>
+                                                <ul>
+                                                    <li>Sukun (ْ): indicates absence of vowel</li>
+                                                    <li>Shadda (ّ): indicates doubled consonant</li>
+                                                    <li>Tanwin: double fathas (ً), kasras (ٍ), or dammas (ٌ) to produce 'an', 'in', and 'un' sounds</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <h5>Letter Forms</h5>
+                                        <p>Most Arabic letters have four forms:</p>
+                                        <ol>
+                                            <li>Isolated form (when not connected to any letter)</li>
+                                            <li>Initial form (when starting a word and connecting to the next letter)</li>
+                                            <li>Medial form (when in the middle, connecting to letters before and after)</li>
+                                            <li>Final form (when at the end, connected to the previous letter)</li>
+                                        </ol>
+
+                                        <p>Six letters (ا د ذ ر ز و) only connect to letters before them, not after.</p>
+
+                                        <h5>Special Pronunciation Rules</h5>
+                                        <ul>
+                                            <li>Some letters change pronunciation when they have sukun</li>
+                                            <li>Letters produce different sounds based on adjacent vowels</li>
+                                            <li>Sun and moon letters affect the pronunciation of the definite article "al-"</li>
+                                            <li>Certain letter combinations have assimilation rules</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Basic Tajweed Rules -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTajweed">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTajweed" aria-expanded="false" aria-controls="collapseTajweed">
+                                    Basic Tajweed Rules
+                                </button>
+                            </h3>
+                            <div id="collapseTajweed" class="accordion-collapse collapse" aria-labelledby="headingTajweed" data-bs-parent="#quranAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>Tajweed refers to the rules governing pronunciation during Quran recitation. Here are some essential rules to start with:</p>
+
+                                        <ol>
+                                            <li><strong>Ghunnah (Nasalization):</strong> When you see noon (ن) or meem (م) with a shadda (ّ), hold the sound for 2 counts with a nasal tone</li>
+                                            <li><strong>Madd (Elongation):</strong> Certain letter combinations require extending the sound for 2, 4, or 6 counts</li>
+                                            <li><strong>Qalqalah (Echo/Bounce):</strong> Five letters (ق ط ب ج د) produce a slight bounce sound when they have sukun (ْ)</li>
+                                            <li><strong>Stopping (Waqf):</strong> When stopping at the end of a verse, the last letter usually becomes unvoweled (with sukun)</li>
+                                            <li><strong>Starting (Ibtida'):</strong> Start with a connected sound if the first letter has a vowel</li>
+                                        </ol>
+
+                                        <p>The best way to learn tajweed is to listen to qualified reciters and practice with a teacher who can correct your pronunciation.</p>
+                                    </div>
+
+                                    <div class="advanced-content" style="display: none;">
+                                        <h4>Comprehensive Tajweed Rules</h4>
+
+                                        <h5>Rules of Noon Saakin (ْن) and Tanween</h5>
+                                        <ol>
+                                            <li><strong>Izhar (Clear Pronunciation):</strong> When noon saakin or tanween is followed by throat letters (ء ه ع ح غ خ)</li>
+                                            <li><strong>Idgham (Merging):</strong> When followed by letters (ي ن م و ل ر), with two subcategories:
+                                                <ul>
+                                                    <li>With ghunnah: (ي ن م و)</li>
+                                                    <li>Without ghunnah: (ل ر)</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Iqlab (Conversion):</strong> When followed by ba (ب), noon is pronounced as a meem with ghunnah</li>
+                                            <li><strong>Ikhfa (Hiding):</strong> When followed by the remaining letters, noon is pronounced with a nasal sound</li>
+                                        </ol>
+
+                                        <h5>Rules of Meem Saakin (ْم)</h5>
+                                        <ol>
+                                            <li><strong>Idgham Shafawi:</strong> When meem saakin is followed by another meem (م), they merge with ghunnah</li>
+                                            <li><strong>Ikhfa Shafawi:</strong> When followed by ba (ب), pronounced with lip hiding and ghunnah</li>
+                                            <li><strong>Izhar Shafawi:</strong> When followed by any other letter, pronounced clearly</li>
+                                        </ol>
+
+                                        <h5>Types of Madd (Elongation)</h5>
+                                        <ol>
+                                            <li><strong>Madd Asli (Natural Extension):</strong> 2 counts for long vowels (ا و ي)</li>
+                                            <li><strong>Madd Wajib Muttasil:</strong> 4-5 counts when a long vowel is followed by hamza in the same word</li>
+                                            <li><strong>Madd Jaiz Munfasil:</strong> 2, 4, or 5 counts when a long vowel ends a word and the next word begins with hamza</li>
+                                            <li><strong>Madd Lazim:</strong> 6 counts when a long vowel is followed by a sukun in the same word</li>
+                                            <li><strong>Madd Arid:</strong> 2, 4, or 6 counts when stopping on a word ending with a long vowel followed by a letter with a vowel</li>
+                                            <li><strong>Madd Leen:</strong> 2, 4, or 6 counts when stopping on a word where waw or ya with sukun follows fatha</li>
+                                        </ol>
+
+                                        <h5>Special Recitation Rules</h5>
+                                        <ol>
+                                            <li><strong>Tafkheem (Heavy Pronunciation):</strong> For certain letters like (ص ض ط ظ خ غ ق) and sometimes (ر)</li>
+                                            <li><strong>Tarqeeq (Light Pronunciation):</strong> For most other letters</li>
+                                            <li><strong>Idgham of Similar Letters:</strong> When similar letters meet at word boundaries</li>
+                                            <li><strong>Imalah:</strong> Specific places where the sound leans toward 'e' instead of 'a'</li>
+                                            <li><strong>Sakt:</strong> Brief pause without breaking breath</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Short Surahs for Beginners -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingSurahs">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSurahs" aria-expanded="false" aria-controls="collapseSurahs">
+                                    Short Surahs with Translation
+                                </button>
+                            </h3>
+                            <div id="collapseSurahs" class="accordion-collapse collapse" aria-labelledby="headingSurahs" data-bs-parent="#quranAccordion">
+                                <div class="accordion-body">
+                                    <div class="basic-content">
+                                        <p>Here are some short surahs that beginners can learn:</p>
+
+                                        <div class="card mb-3">
+                                            <div class="card-header bg-light">
+                                                <h5>Surah Al-Fatihah (The Opening)</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="arabic-text text-end fs-4">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                                                <p class="text-muted">Bismillahir rahmanir raheem</p>
+                                                <p>In the name of Allah, the Most Gracious, the Most Merciful</p>
+
+                                                <p class="arabic-text text-end fs-4">الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ</p>
+                                                <p class="text-muted">Alhamdu lillahi rabbil 'alameen</p>
+                                                <p>All praise is due to Allah, Lord of the worlds</p>
+
+                                                <p class="arabic-text text-end fs-4">الرَّحْمَنِ الرَّحِيمِ</p>
+                                                <p class="text-muted">Ar-rahmanir-raheem</p>
+                                                <p>The Most Gracious, the Most Merciful</p>
+
+                                                <p class="arabic-text text-end fs-4">مَالِكِ يَوْمِ الدِّينِ</p>
+                                                <p class="text-muted">Maliki yawmid-deen</p>
+                                                <p>Master of the Day of Judgment</p>
+
+                                                <p class="arabic-text text-end fs-4">إِ �َّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</p>
+                                                <p class="text-muted">Iyyaka na'budu wa iyyaka nasta'een</p>
+                                                <p>You alone we worship and You alone we ask for help</p>
+
+                                                <p class="arabic-text text-end fs-4">اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ</p>
+                                                <p class="text-muted">Ihdinas-siratal-mustaqeem</p>
+                                                <p>Guide us to the straight path</p>
+
+                                                <p class="arabic-text text-end fs-4">صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ</p>
+                                                <p class="text-muted">Siratal-latheena an'amta 'alayhim, ghayril-maghdubi 'alayhim wa lad-dalleen</p>
+                                                <p>The path of those upon whom You have bestowed favor, not of those who have evoked Your anger or of those who are astray</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-3">
+                                            <div class="card-header bg-light">
+                                                <h5>Surah Al-Ikhlas (The Sincerity)</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="arabic-text text-end fs-4">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                                                <p class="text-muted">Bismillahir rahmanir raheem</p>
+                                                <p>In the name of Allah, the Most Gracious, the Most Merciful</p>
+
+                                                <p class="arabic-text text-end fs-4">قُلْ هُوَ اللَّهُ أَحَدٌ</p>
+                                                <p class="text-muted">Qul huwa Allahu ahad</p>
+                                                <p>Say: He is Allah, the One</p>
+
+                                                <p class="arabic-text text-end fs-4">اللَّهُ الصَّمَدُ</p>
+                                                <p class="text-muted">Allahu-samad</p>
+                                                <p>Allah, the Eternal, Absolute</p>
+
+                                                <p class="arabic-text text-end fs-4">لَمْ يَلِدْ وَلَمْ يُولَدْ</p>
+                                                <p class="text-muted">Lam yalid wa lam yulad</p>
+                                                <p>He begets not, nor is He begotten</p>
+
+                                                <p class="arabic-text text-end fs-4">وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ</p>
+                                                <p class="text-muted">Wa lam yakun lahu kufuwan ahad</p>
+                                                <p>And there is none like unto Him</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="advanced-content" style="display: none;">
+                                        <h4>Additional Short Surahs with Detailed Analysis</h4>
+
+                                        <div class="card mb-3">
+                                            <div class="card-header bg-light">
+                                                <h5>Surah Al-Falaq (The Daybreak)</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="arabic-text text-end fs-4">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                                                <p class="text-muted">Bismillahir rahmanir raheem</p>
+                                                <p>In the name of Allah, the Most Gracious, the Most Merciful</p>
+
+                                                <p class="arabic-text text-end fs-4">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</p>
+                                                <p class="text-muted">Qul a'udhu birabbil-falaq</p>
+                                                <p>Say: I seek refuge with the Lord of the Daybreak</p>
+
+                                                <p class="arabic-text text-end fs-4">مِن شَرِّ مَا خَلَقَ</p>
+                                                <p class="text-muted">Min sharri ma khalaq</p>
+                                                <p>From the evil of what He has created</p>
+
+                                                <p class="arabic-text text-end fs-4">وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ</p>
+                                                <p class="text-muted">Wa min sharri ghasiqin idha waqab</p>
+                                                <p>And from the evil of darkness when it settles</p>
+
+                                                <p class="arabic-text text-end fs-4">وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ</p>
+                                                <p class="text-muted">Wa min sharrin-naffathati fil 'uqad</p>
+                                                <p>And from the evil of the blowers in knots</p>
+
+                                                <p class="arabic-text text-end fs-4">وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</p>
+                                                <p class="text-muted">Wa min sharri hasidin idha hasad</p>
+                                                <p>And from the evil of an envier when he envies</p>
+
+                                                <h6 class="mt-3">Explanation:</h6>
+                                                <p>This surah teaches us to seek protection from various sources of evil:</p>
+                                                <ul>
+                                                    <li>Evil in creation in general</li>
+                                                    <li>The darkness of night and what it conceals</li>
+                                                    <li>Those who practice black magic</li>
+                                                    <li>Those who harbor envy and jealousy</li>
+                                                </ul>
+                                                <p>It is recommended to recite this surah along with Al-Nas and Al-Ikhlas every morning and evening for protection.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-3">
+                                            <div class="card-header bg-light">
+                                                <h5>Tajweed Analysis of Surah Al-Ikhlas</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Here's a breakdown of the tajweed rules found in Surah Al-Ikhlas:</p>
+
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <th>Verse</th>
+                                                                <th>Rule</th>
+                                                                <th>Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>قُلْ هُوَ اللَّهُ أَحَدٌ</td>
+                                                                <td>Qalqalah</td>
+                                                                <td>The letter "Qaf" in "Qul" has sukun, producing a slight bounce</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>قُلْ هُوَ اللَّهُ أَحَدٌ</td>
+                                                                <td>Izhar</td>
+                                                                <td>The "Lam" with sukun in "Qul" is followed by "Ha" in "Huwa", requiring clear pronunciation</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>اللَّهُ الصَّمَدُ</td>
+                                                                <td>Shaddah</td>
+                                                                <td>The "Lam" in "Allah" and "Sad" in "As-Samad" have shaddah, requiring doubled pronunciation</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>لَمْ يَلِدْ وَلَمْ يُولَدْ</td>
+                                                                <td>Ikhfa Shafawi</td>
+                                                                <td>The "Meem" with sukun in "Lam" is followed by "Ya" in "Yalid", requiring hidden pronunciation</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>لَمْ يَلِدْ وَلَمْ يُولَدْ</td>
+                                                                <td>Qalqalah</td>
+                                                                <td>The "Dal" with sukun in "Yalid" and "Yulad" requires qalqalah</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ</td>
+                                                                <td>Idgham</td>
+                                                                <td>The "Lam" with sukun in "Lam" is followed by another "Lam" in "Lahu", requiring merging</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ</td>
+                                                                <td>Tanwin</td>
+                                                                <td>The word "Kufuwan" has tanwin (double damma), producing an "un" sound</td>
+                                                            </tr>
+                                                        </tbody>
+                                                        </table>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        
+                                                        <!-- Memorization Tips -->
+                                                        <div class="accordion-item">
+                                                            <h3 class="accordion-header" id="headingMemorization">
+                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseMemorization" aria-expanded="false" aria-controls="collapseMemorization">
+                                                                    Tips for Memorizing the Quran
+                                                                </button>
+                                                            </h3>
+                                                            <div id="collapseMemorization" class="accordion-collapse collapse" aria-labelledby="headingMemorization"
+                                                                data-bs-parent="#quranAccordion">
+                                                                <div class="accordion-body">
+                                                                    <div class="basic-content">
+                                                                        <p>Memorizing the Quran is a rewarding spiritual journey. Here are some practical tips to help you get
+                                                                            started:</p>
+                                                        
+                                                                        <h5>1. Set Realistic Goals</h5>
+                                                                        <ul>
+                                                                            <li>Start with small, achievable goals like one verse or a short surah</li>
+                                                                            <li>Create a consistent schedule - even 15 minutes daily is better than irregular longer sessions
+                                                                            </li>
+                                                                            <li>Plan your memorization journey based on your pace and schedule</li>
+                                                                        </ul>
+                                                        
+                                                                        <h5>2. Effective Memorization Techniques</h5>
+                                                                        <ul>
+                                                                            <li>Understand the meaning of what you are memorizing</li>
+                                                                            <li>Use the same mushaf (copy of the Quran) consistently to develop visual memory</li>
+                                                                            <li>Recite aloud rather than silently to engage multiple senses</li>
+                                                                            <li>Break down surahs into smaller portions or by themes</li>
+                                                                            <li>Practice writing what you memorize to reinforce memory</li>
+                                                                        </ul>
+                                                        
+                                                                        <h5>3. Revision Strategy</h5>
+                                                                        <ul>
+                                                                            <li>Review what you've memorized before moving on to new material</li>
+                                                                            <li>Recite portions in your daily prayers to strengthen memorization</li>
+                                                                            <li>Find a memorization partner for mutual testing and motivation</li>
+                                                                        </ul>
+                                                        
+                                                                        <h5>4. Practical Habits</h5>
+                                                                        <ul>
+                                                                            <li>Memorize when your mind is fresh, typically early morning</li>
+                                                                            <li>Eliminate distractions during your memorization time</li>
+                                                                            <li>Listen to recitations by qualified reciters</li>
+                                                                            <li>Seek guidance from a teacher when possible</li>
+                                                                        </ul>
+                                                                    </div>
+                                                        
+                                                                    <div class="advanced-content" style="display: none;">
+                                                                        <h4>Advanced Quran Memorization Methodologies</h4>
+                                                        
+                                                                        <h5>Traditional Memorization Systems</h5>
+                                                                        <p>Various systems are used in different parts of the Muslim world:</p>
+                                                        
+                                                                        <ol>
+                                                                            <li><strong>The Five-Page System:</strong> Memorizing five pages daily with extensive review,
+                                                                                completing the Quran in about 120 days</li>
+                                                                            <li><strong>The Three-Stage Method:</strong>
+                                                                                <ul>
+                                                                                    <li>Stage 1: Initial memorization with intense focus</li>
+                                                                                    <li>Stage 2: Short-term review cycle (1-7 days)</li>
+                                                                                    <li>Stage 3: Long-term review cycle (monthly, quarterly, yearly)</li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li><strong>The Repeated-Recitation Method:</strong> Reciting a small portion (e.g., one verse)
+                                                                                multiple times (e.g., 20 times) before moving to the next, then connecting them</li>
+                                                                            <li><strong>The Overlapping Method:</strong> Adding new material while reviewing a portion of what
+                                                                                was memorized the previous day</li>
+                                                                        </ol>
+                                                        
+                                                                        <h5>Cognitive Science and Memorization</h5>
+                                                                        <p>Modern research on memory formation supports these techniques:</p>
+                                                        
+                                                                        <ul>
+                                                                            <li><strong>Spaced repetition:</strong> Reviewing memorized material at increasing intervals
+                                                                                strengthens neural pathways</li>
+                                                                            <li><strong>Chunking:</strong> Breaking information into meaningful segments improves recall</li>
+                                                                            <li><strong>Dual coding:</strong> Using both visual memory (seeing the Quran) and auditory memory
+                                                                                (reciting aloud)</li>
+                                                                            <li><strong>Elaborative encoding:</strong> Understanding meanings and connecting to existing
+                                                                                knowledge</li>
+                                                                            <li><strong>State-dependent learning:</strong> Memorizing in the same physical location enhances
+                                                                                recall</li>
+                                                                        </ul>
+                                                        
+                                                                        <h5>Digital Tools for Quran Memorization</h5>
+                                                                        <p>Several apps and platforms can assist in memorization:</p>
+                                                        
+                                                                        <ul>
+                                                                            <li>Apps with spaced repetition algorithms</li>
+                                                                            <li>Recitation recording and playback features</li>
+                                                                            <li>Progress tracking and achievement systems</li>
+                                                                            <li>Community features for mutual encouragement</li>
+                                                                            <li>Virtual teachers and AI-based correction systems</li>
+                                                                        </ul>
+                                                        
+                                                                        <h5>Psychological and Spiritual Aspects</h5>
+                                                                        <p>Successful memorization involves these dimensions:</p>
+                                                        
+                                                                        <ul>
+                                                                            <li><strong>Intention (niyyah):</strong> Clarifying your purpose for memorization</li>
+                                                                            <li><strong>Spiritual preparation:</strong> Building taqwa (God-consciousness) to facilitate
+                                                                                memorization</li>
+                                                                            <li><strong>Character development:</strong> Embodying the teachings of the Quran in daily life</li>
+                                                                            <li><strong>Avoiding sins:</strong> Traditional scholars emphasized that sins weaken memory</li>
+                                                                            <li><strong>Du'a (supplication):</strong> Seeking Allah's assistance in the memorization journey
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                                                                                <div class="col-lg-4">
+                                                                                                                    <div class="card mb-4">
+                                                                                                                        <div class="card-header bg-success text-white">
+                                                                                                                            <h3 class="mb-0 fs-5">Navigation</h3>
+                                                                                                                        </div>
+                                                                                                                        <div class="card-body">
+                                                                                                                            <ul class="list-group list-group-flush">
+                                                                                                                                <li class="list-group-item basic-content">
+                                                                                                                                    <a href="#fundamentalsAccordion" class="text-decoration-none">1. Fundamentals of Islam</a>
+                                                                                                                                </li>
+                                                                                                                                <li class="list-group-item basic-content">
+                                                                                                                                    <a href="#worshipAccordion" class="text-decoration-none">2. Practical Worship Guide</a>
+                                                                                                                                </li>
+                                                                                                                                <li class="list-group-item advanced-content" style="display: none;">
+                                                                                                                                    <a href="#quranAccordion" class="text-decoration-none">3. Beginning to Read Quran</a>
+                                                                                                                                </li>
+                                                                                                                                <li class="list-group-item advanced-content" style="display: none;">
+                                                                                                                                    <a href="#calendarAccordion" class="text-decoration-none">4. Islamic Calendar and Holidays</a>
+                                                                                                                                </li>
+                                                                                                                                <li class="list-group-item advanced-content" style="display: none;">
+                                                                                                                                    <a href="#dailyLivingAccordion" class="text-decoration-none">5. Daily Living as a Muslim</a>
+                                                                                                                                </li>
+                                                                                                                            </ul>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                
+                                                                                                                    <div class="card mb-4">
+                                                                                                                        <div class="card-header bg-info text-white">
+                                                                                                                            <h3 class="mb-0 fs-5">Featured Duas</h3>
+                                                                                                                        </div>
+                                                                                                                        <div class="card-body">
+                                                                                                                            <p>Enhance your learning with these essential duas:</p>
+                                                                                                                            <a href="{% url 'myapp:categories' %}" class="btn btn-outline-primary w-100 mb-2">Browse Dua Categories</a>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                </div>
+                                                                                                                </div>
+                                                                    <!-- Islamic Calendar and Holidays Section -->
+                                                                    <div class="card mb-4 advanced-content" style="display: none;">
+                                                                        <div class="card-header bg-info text-white">
+                                                                            <h2 class="mb-0 fs-4">4. Islamic Calendar and Holidays</h2>
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                            <div class="accordion" id="calendarAccordion">
+                                                                                <!-- Hijri Calendar -->
+                                                                                <div class="accordion-item">
+                                                                                    <h2 class="accordion-header" id="hijriCalendarHeading">
+                                                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                                                            data-bs-target="#hijriCalendarCollapse" aria-expanded="true"
+                                                                                            aria-controls="hijriCalendarCollapse">
+                                                                                            The Hijri Calendar
+                                                                                        </button>
+                                                                                    </h2>
+                                                                                    <div id="hijriCalendarCollapse" class="accordion-collapse collapse show"
+                                                                                        aria-labelledby="hijriCalendarHeading">
+                                                                                        <div class="accordion-body">
+                                                                                            <div class="basic-content">
+                                                                                                <h4>Understanding the Islamic Calendar</h4>
+                                                                                                <p>The Islamic (Hijri) calendar is a lunar calendar consisting of 12 months in a year of 354
+                                                                                                    or 355 days. It began with the migration (Hijra) of Prophet Muhammad ﷺ from Mecca to
+                                                                                                    Medina in 622 CE.</p>
+                                                                    
+                                                                                                <h5>The Islamic Months</h5>
+                                                                                                <ol>
+                                                                                                    <li>Muharram</li>
+                                                                                                    <li>Safar</li>
+                                                                                                    <li>Rabi al-Awwal</li>
+                                                                                                    <li>Rabi al-Thani</li>
+                                                                                                    <li>Jumada al-Awwal</li>
+                                                                                                    <li>Jumada al-Thani</li>
+                                                                                                    <li>Rajab</li>
+                                                                                                    <li>Sha'ban</li>
+                                                                                                    <li>Ramadan</li>
+                                                                                                    <li>Shawwal</li>
+                                                                                                    <li>Dhu al-Qa'dah</li>
+                                                                                                    <li>Dhu al-Hijjah</li>
+                                                                                                </ol>
+                                                                                            </div>
+                                                                    
+                                                                                            <div class="advanced-content" style="display: none;">
+                                                                                                <h4>Detailed Analysis of the Hijri Calendar</h4>
+                                                                                                <p>The Hijri calendar is strictly lunar, with months beginning when the new moon is sighted.
+                                                                                                    This creates a calendar that is 10-11 days shorter than the solar year, causing Islamic
+                                                                                                    dates to gradually cycle through the seasons.</p>
+                                                                    
+                                                                                                <h5>Historical Significance</h5>
+                                                                                                <p>Caliph Umar ibn Al-Khattab established the Islamic calendar in the year 17 AH (Anno
+                                                                                                    Hegirae, "in the year of the Hijra"). The starting point (epoch) was set as the year of
+                                                                                                    the Prophet's migration from Mecca to Medina.</p>
+                                                                    
+                                                                                                <h5>Calculation Methods</h5>
+                                                                                                <p>There are two primary approaches to determining the beginning of Islamic months:</p>
+                                                                                                <ul>
+                                                                                                    <li><strong>Moon Sighting (Ru'yah):</strong> The traditional method based on visual
+                                                                                                        sighting of the new crescent moon</li>
+                                                                                                    <li><strong>Astronomical Calculation (Hisab):</strong> Mathematical prediction of when
+                                                                                                        the new moon will be born</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <p>The debate between these two approaches continues in contemporary Muslim communities,
+                                                                                                    with some following local sightings, others following sightings from Mecca or Medina,
+                                                                                                    and others using pre-calculated calendars.</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                    
+                                                                                <!-- Major Islamic Holidays -->
+                                                                                <div class="accordion-item">
+                                                                                    <h2 class="accordion-header" id="holidaysHeading">
+                                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                                                            data-bs-target="#holidaysCollapse" aria-expanded="false" aria-controls="holidaysCollapse">
+                                                                                            Major Islamic Holidays
+                                                                                        </button>
+                                                                                    </h2>
+                                                                                    <div id="holidaysCollapse" class="accordion-collapse collapse" aria-labelledby="holidaysHeading">
+                                                                                        <div class="accordion-body">
+                                                                                            <div class="basic-content">
+                                                                                                <h4>Important Islamic Celebrations</h4>
+                                                                    
+                                                                                                <h5>Eid al-Fitr</h5>
+                                                                                                <p>The "Festival of Breaking the Fast" celebrates the end of Ramadan. Muslims perform Eid
+                                                                                                    prayers, give charity, and gather with family and friends for festive meals.</p>
+                                                                    
+                                                                                                <h5>Eid al-Adha</h5>
+                                                                                                <p>The "Festival of Sacrifice" commemorates Prophet Ibrahim's willingness to sacrifice his
+                                                                                                    son in obedience to God. It coincides with the Hajj pilgrimage and involves the
+                                                                                                    sacrifice of an animal and distribution of meat to the poor.</p>
+                                                                    
+                                                                                                <h5>Other Significant Days</h5>
+                                                                                                <ul>
+                                                                                                    <li>Ashura (10th of Muharram)</li>
+                                                                                                    <li>Mawlid al-Nabi (Prophet's Birthday)</li>
+                                                                                                    <li>Laylat al-Qadr (Night of Power during Ramadan)</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                    
+                                                                                            <div class="advanced-content" style="display: none;">
+                                                                                                <h4>Comprehensive Guide to Islamic Holy Days</h4>
+                                                                    
+                                                                                                <h5>Eid al-Fitr</h5>
+                                                                                                <p>Marks the end of Ramadan, occurring on the 1st of Shawwal. The day begins with a special
+                                                                                                    congregational prayer followed by a sermon (khutbah). Key practices include:</p>
+                                                                                                <ul>
+                                                                                                    <li>Giving Zakat al-Fitr (special charity) before the prayer</li>
+                                                                                                    <li>Wearing one's best clothes</li>
+                                                                                                    <li>Takbeer recitation (saying "Allahu Akbar") from sunset of the last day of Ramadan
+                                                                                                        until the Eid prayer</li>
+                                                                                                    <li>Exchanging gifts and visiting relatives</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Eid al-Adha</h5>
+                                                                                                <p>Occurs on the 10th of Dhu al-Hijjah and lasts for four days. Beyond the sacrifice ritual,
+                                                                                                    important aspects include:</p>
+                                                                                                <ul>
+                                                                                                    <li>The Days of Tashriq (11th-13th of Dhu al-Hijjah) when fasting is prohibited</li>
+                                                                                                    <li>Distribution of sacrifice meat into three portions: one for family, one for friends,
+                                                                                                        and one for those in need</li>
+                                                                                                    <li>Special prayers and supplications during these blessed days</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Ashura</h5>
+                                                                                                <p>The 10th of Muharram commemorates several events:</p>
+                                                                                                <ul>
+                                                                                                    <li>The day when Allah saved Prophet Musa (Moses) and the Children of Israel from
+                                                                                                        Pharaoh</li>
+                                                                                                    <li>The martyrdom of Imam Hussein, the grandson of Prophet Muhammad, at Karbala
+                                                                                                        (particularly significant for Shia Muslims)</li>
+                                                                                                    <li>Fasting on this day is recommended, preferably with the day before or after it</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Laylat al-Qadr</h5>
+                                                                                                <p>Believed to occur on one of the odd nights during the last ten days of Ramadan (most
+                                                                                                    commonly the 27th night). Its significance includes:</p>
+                                                                                                <ul>
+                                                                                                    <li>It is better than a thousand months of worship (Quran 97:3)</li>
+                                                                                                    <li>The Quran was first revealed on this night</li>
+                                                                                                    <li>Angels descend with special blessings</li>
+                                                                                                    <li>Prayers and good deeds are multiplied in reward</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                    
+                                                                                <!-- Ramadan -->
+                                                                                <div class="accordion-item">
+                                                                                    <h2 class="accordion-header" id="ramadanHeading">
+                                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                                                            data-bs-target="#ramadanCollapse" aria-expanded="false" aria-controls="ramadanCollapse">
+                                                                                            Ramadan: Rules and Spirituality
+                                                                                        </button>
+                                                                                    </h2>
+                                                                                    <div id="ramadanCollapse" class="accordion-collapse collapse" aria-labelledby="ramadanHeading">
+                                                                                        <div class="accordion-body">
+                                                                                            <div class="basic-content">
+                                                                                                <h4>The Holy Month of Ramadan</h4>
+                                                                                                <p>Ramadan is the ninth month of the Islamic calendar when Muslims fast from dawn until
+                                                                                                    sunset. It was during this month that the Quran was revealed to Prophet Muhammad ﷺ.</p>
+                                                                    
+                                                                                                <h5>Basic Fasting Rules</h5>
+                                                                                                <ul>
+                                                                                                    <li>Abstain from food, drink, and marital relations from dawn (Fajr) to sunset (Maghrib)
+                                                                                                    </li>
+                                                                                                    <li>Fasting is obligatory for adult Muslims who are physically able</li>
+                                                                                                    <li>Exemptions include travelers, the ill, elderly, pregnant or nursing women, and
+                                                                                                        menstruating women</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Spiritual Dimensions</h5>
+                                                                                                <ul>
+                                                                                                    <li>Increased prayer and Quran recitation</li>
+                                                                                                    <li>Heightened charity and good deeds</li>
+                                                                                                    <li>Self-discipline and patience</li>
+                                                                                                    <li>Gratitude and empathy for those less fortunate</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                    
+                                                                                            <div class="advanced-content" style="display: none;">
+                                                                                                <h4>Comprehensive Guide to Ramadan Practices</h4>
+                                                                    
+                                                                                                <h5>Fiqh of Fasting (Legal Rulings)</h5>
+                                                                                                <ul>
+                                                                                                    <li><strong>Conditions for Obligation:</strong> Islam, puberty, sanity, physical
+                                                                                                        ability, residency</li>
+                                                                                                    <li><strong>Nullifiers of Fast:</strong> Intentional eating/drinking, sexual
+                                                                                                        intercourse, deliberate vomiting, menstruation/post-childbirth bleeding</li>
+                                                                                                    <li><strong>Expiation (Kaffarah):</strong> Required for deliberate breaking of fast
+                                                                                                        without valid reason - freeing a slave, or fasting for 60 consecutive days, or
+                                                                                                        feeding 60 poor people</li>
+                                                                                                    <li><strong>Recommended Acts:</strong> Suhoor (pre-dawn meal), hastening to break fast
+                                                                                                        at sunset, moderating behavior (speech and actions)</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Taraweeh Prayers</h5>
+                                                                                                <p>Special night prayers performed after Isha prayer during Ramadan:</p>
+                                                                                                <ul>
+                                                                                                    <li>Usually 8 or 20 rakats (prayer units), though the number can vary by tradition</li>
+                                                                                                    <li>Often includes recitation of 1/30th of the Quran each night, completing the entire
+                                                                                                        Quran by the end of Ramadan</li>
+                                                                                                    <li>Congregational in nature but can be performed individually</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>I'tikaf (Spiritual Retreat)</h5>
+                                                                                                <p>Secluding oneself in the mosque during the last ten days of Ramadan:</p>
+                                                                                                <ul>
+                                                                                                    <li>Following the Sunnah of Prophet Muhammad ﷺ</li>
+                                                                                                    <li>Dedicating time to worship, Quran reading, and reflection</li>
+                                                                                                    <li>Minimizing worldly distractions and conversations</li>
+                                                                                                    <li>Searching for Laylat al-Qadr</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Spiritual Development Program</h5>
+                                                                                                <p>Scholars recommend a structured approach to spiritual growth during Ramadan:</p>
+                                                                                                <ul>
+                                                                                                    <li><strong>First 10 Days:</strong> Focus on seeking Allah's mercy</li>
+                                                                                                    <li><strong>Second 10 Days:</strong> Focus on seeking Allah's forgiveness</li>
+                                                                                                    <li><strong>Last 10 Days:</strong> Focus on seeking refuge from Hellfire and attaining
+                                                                                                        Paradise</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                    
+                                                                                <!-- Eid Celebrations -->
+                                                                                <div class="accordion-item">
+                                                                                    <h2 class="accordion-header" id="eidCelebrationsHeading">
+                                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                                                            data-bs-target="#eidCelebrationsCollapse" aria-expanded="false"
+                                                                                            aria-controls="eidCelebrationsCollapse">
+                                                                                            Eid Celebrations and Traditions
+                                                                                        </button>
+                                                                                    </h2>
+                                                                                    <div id="eidCelebrationsCollapse" class="accordion-collapse collapse"
+                                                                                        aria-labelledby="eidCelebrationsHeading">
+                                                                                        <div class="accordion-body">
+                                                                                            <div class="basic-content">
+                                                                                                <h4>Celebrating Eid in the Islamic Tradition</h4>
+                                                                    
+                                                                                                <h5>Common Traditions for Both Eids</h5>
+                                                                                                <ul>
+                                                                                                    <li>Special congregational prayers in the morning</li>
+                                                                                                    <li>Wearing new or best clothes</li>
+                                                                                                    <li>Exchanging greetings ("Eid Mubarak")</li>
+                                                                                                    <li>Family gatherings and festive meals</li>
+                                                                                                    <li>Giving gifts, especially to children</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Regional Variations</h5>
+                                                                                                <p>Muslims around the world celebrate Eid with their own cultural traditions, including
+                                                                                                    special foods, decorations, and festivities that vary from country to country.</p>
+                                                                                            </div>
+                                                                    
+                                                                                            <div class="advanced-content" style="display: none;">
+                                                                                                <h4>Global Eid Traditions and Celebrations</h4>
+                                                                    
+                                                                                                <h5>The Sunnah of Eid</h5>
+                                                                                                <p>Prophet Muhammad's ﷺ practices for Eid included:</p>
+                                                                                                <ul>
+                                                                                                    <li>Performing ghusl (full bath) before the prayer</li>
+                                                                                                    <li>Eating dates (odd number) before leaving for Eid al-Fitr prayer</li>
+                                                                                                    <li>Delaying eating until after Eid al-Adha prayer (to eat from the sacrifice)</li>
+                                                                                                    <li>Walking to the prayer ground when possible</li>
+                                                                                                    <li>Taking different routes to and from the prayer</li>
+                                                                                                    <li>Saying takbeer loudly on the way to prayer</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Cultural Celebrations Around the World</h5>
+                                                                                                <ul>
+                                                                                                    <li><strong>Middle East:</strong> Families visit relatives with gifts of sweets and
+                                                                                                        perfumes; children receive money gifts (Eidiyah)</li>
+                                                                                                    <li><strong>South Asia:</strong> Homes are decorated, women apply henna designs, special
+                                                                                                        desserts like seviyan (vermicelli pudding) are prepared</li>
+                                                                                                    <li><strong>Turkey:</strong> Known as Şeker Bayramı (Sugar Feast) for Eid al-Fitr and
+                                                                                                        Kurban Bayramı for Eid al-Adha; involves visiting elders and kissing their hands
+                                                                                                    </li>
+                                                                                                    <li><strong>Indonesia/Malaysia:</strong> "Open house" tradition where homes are open to
+                                                                                                        visitors of all faiths; special cookies and rendang (spicy meat dish) are served
+                                                                                                    </li>
+                                                                                                    <li><strong>North Africa:</strong> New clothes are essential; families prepare special
+                                                                                                        pastries and cookies days in advance</li>
+                                                                                                    <li><strong>West Africa:</strong> Community gatherings with drumming, dancing, and
+                                                                                                        colorful processions</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Contemporary Eid Celebrations in the West</h5>
+                                                                                                <p>Muslim communities in Western countries have developed their own Eid traditions:</p>
+                                                                                                <ul>
+                                                                                                    <li>Community Eid prayers in rented venues, parks, or convention centers</li>
+                                                                                                    <li>Eid festivals with rides, games, bazaars, and international food</li>
+                                                                                                    <li>Charity events and fundraisers coinciding with Eid celebrations</li>
+                                                                                                    <li>Interfaith Eid events introducing non-Muslims to Islamic traditions</li>
+                                                                                                    <li>Workplace and school accommodations for Muslims celebrating Eid</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <!-- Daily Living as a Muslim Section -->
+                                                                    <div class="card mb-4 advanced-content" style="display: none;">
+                                                                        <div class="card-header bg-info text-white">
+                                                                            <h2 class="mb-0 fs-4">5. Daily Living as a Muslim</h2>
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                            <div class="accordion" id="dailyLivingAccordion">
+                                                                                <!-- Halal and Haram -->
+                                                                                <div class="accordion-item">
+                                                                                    <h2 class="accordion-header" id="halalHaramHeading">
+                                                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                                                            data-bs-target="#halalHaramCollapse" aria-expanded="true" aria-controls="halalHaramCollapse">
+                                                                                            Halal and Haram Foods Explained
+                                                                                        </button>
+                                                                                    </h2>
+                                                                                    <div id="halalHaramCollapse" class="accordion-collapse collapse show"
+                                                                                        aria-labelledby="halalHaramHeading">
+                                                                                        <div class="accordion-body">
+                                                                                            <div class="basic-content">
+                                                                                                <h4>Understanding Halal and Haram</h4>
+                                                                                                <p>Halal means "permissible" while Haram means "forbidden" in Islamic law. These concepts
+                                                                                                    guide Muslim dietary practices.</p>
+                                                                    
+                                                                                                <h5>Halal Foods</h5>
+                                                                                                <ul>
+                                                                                                    <li>Most fruits, vegetables, grains, dairy, and legumes</li>
+                                                                                                    <li>Properly slaughtered livestock (with Allah's name pronounced)</li>
+                                                                                                    <li>Seafood (with some variations in different schools of thought)</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Haram Foods</h5>
+                                                                                                <ul>
+                                                                                                    <li>Pork and pork by-products</li>
+                                                                                                    <li>Animals not slaughtered according to Islamic guidelines</li>
+                                                                                                    <li>Blood and blood products</li>
+                                                                                                    <li>Alcohol and intoxicants</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                    
+                                                                                            <div class="advanced-content" style="display: none;">
+                                                                                                <h4>Comprehensive Guide to Islamic Dietary Laws</h4>
+                                                                    
+                                                                                                <h5>Theological Basis</h5>
+                                                                                                <p>Islamic dietary laws are derived from several Quranic verses, including:</p>
+                                                                                                <ul>
+                                                                                                    <li>Surah Al-Baqarah (2:173): "He has only forbidden to you dead animals, blood, the
+                                                                                                        flesh of swine, and that which has been dedicated to other than Allah."</li>
+                                                                                                    <li>Surah Al-Ma'idah (5:3): Detailed prohibitions of various types of meat</li>
+                                                                                                    <li>Surah Al-Ma'idah (5:90): Prohibition of intoxicants</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Conditions for Halal Slaughter (Dhabiha)</h5>
+                                                                                                <ol>
+                                                                                                    <li>The animal must be alive at the time of slaughter</li>
+                                                                                                    <li>Allah's name must be pronounced (saying "Bismillah" and "Allahu Akbar")</li>
+                                                                                                    <li>Slaughter must be performed with a sharp knife, cutting the throat, windpipe, and
+                                                                                                        blood vessels</li>
+                                                                                                    <li>Blood must be drained completely</li>
+                                                                                                    <li>The person performing the slaughter should be a Muslim, Christian, or Jew (though
+                                                                                                        some scholars require a Muslim)</li>
+                                                                                                </ol>
+                                                                    
+                                                                                                <h5>Differences Between Schools of Thought</h5>
+                                                                                                <ul>
+                                                                                                    <li><strong>Seafood:</strong> Hanafi school permits only fish, while others allow most
+                                                                                                        seafood</li>
+                                                                                                    <li><strong>Land Animals:</strong> General agreement on permissibility of herbivores;
+                                                                                                        disagreement on some predatory animals</li>
+                                                                                                    <li><strong>Alcohol in Food Processing:</strong> Varying opinions on foods containing
+                                                                                                        small amounts of alcohol as ingredients or processing aids</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Modern Halal Certification</h5>
+                                                                                                <p>Contemporary Muslims often rely on halal certification organizations that inspect and
+                                                                                                    verify food production:</p>
+                                                                                                <ul>
+                                                                                                    <li>Inspection of ingredients and production facilities</li>
+                                                                                                    <li>Verification of slaughter methods</li>
+                                                                                                    <li>Testing for haram contaminants</li>
+                                                                                                    <li>Regular audits and compliance checks</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Necessity (Darura) Exception</h5>
+                                                                                                <p>Islamic law provides exceptions in cases of necessity:</p>
+                                                                                                <ul>
+                                                                                                    <li>If no halal food is available and one faces starvation</li>
+                                                                                                    <li>Medical necessities with no halal alternatives</li>
+                                                                                                    <li>Unintentional or unknowing consumption of haram</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                    
+                                                                                <!-- Islamic Dress Code -->
+                                                                                <div class="accordion-item">
+                                                                                    <h2 class="accordion-header" id="dressCodeHeading">
+                                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                                                            data-bs-target="#dressCodeCollapse" aria-expanded="false" aria-controls="dressCodeCollapse">
+                                                                                            Islamic Dress Code and Modesty
+                                                                                        </button>
+                                                                                    </h2>
+                                                                                    <div id="dressCodeCollapse" class="accordion-collapse collapse" aria-labelledby="dressCodeHeading">
+                                                                                        <div class="accordion-body">
+                                                                                            <div class="basic-content">
+                                                                                                <h4>Principles of Islamic Modesty</h4>
+                                                                                                <p>Islamic dress is guided by the principle of modesty (hayaa) for both men and women,
+                                                                                                    though specific requirements differ.</p>
+                                                                    
+                                                                                                <h5>Guidelines for Men</h5>
+                                                                                                <ul>
+                                                                                                    <li>Cover from navel to knees at minimum</li>
+                                                                                                    <li>Wear loose, non-transparent clothing</li>
+                                                                                                    <li>Avoid silk and gold (prohibited for men)</li>
+                                                                                                    <li>Avoid clothing associated with other religions</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Guidelines for Women</h5>
+                                                                                                <ul>
+                                                                                                    <li>Cover the entire body except face and hands in public</li>
+                                                                                                    <li>Wear loose, non-transparent clothing that doesn't reveal body shape</li>
+                                                                                                    <li>Hijab (headscarf) covers hair, neck, and chest</li>
+                                                                                                    <li>Modest behavior complements modest dress</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                    
+                                                                                            <div class="advanced-content" style="display: none;">
+                                                                                                <h4>Comprehensive Analysis of Islamic Dress Codes</h4>
+                                                                    
+                                                                                                <h5>Scriptural Foundations</h5>
+                                                                                                <ul>
+                                                                                                    <li><strong>Quran 24:30-31:</strong> Commands believing men and women to lower their
+                                                                                                        gaze and guard their modesty</li>
+                                                                                                    <li><strong>Quran 33:59:</strong> Instructs Prophet's wives, daughters, and believing
+                                                                                                        women to draw their outer garments around them</li>
+                                                                                                    <li><strong>Hadith:</strong> Numerous traditions addressing specific aspects of dress
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Different Interpretations and Cultural Variations</h5>
+                                                                                                <ul>
+                                                                                                    <li><strong>Coverage for Women:</strong>
+                                                                                                        <ul>
+                                                                                                            <li>Majority view: Body except face and hands must be covered</li>
+                                                                                                            <li>Some scholars include face covering (niqab)</li>
+                                                                                                            <li>Others permit showing more (forearms, feet) in certain contexts</li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                    <li><strong>Regional Dress Forms:</strong>
+                                                                                                        <ul>
+                                                                                                            <li>Abaya: Loose over-garment worn in Gulf countries</li>
+                                                                                                            <li>Jilbab: Long coat-like garment popular in various regions</li>
+                                                                                                            <li>Chador: Full-body cloak common in Iran</li>
+                                                                                                            <li>Shalwar kameez: Long tunic with pants common in South Asia</li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Contemporary Challenges and Adaptations</h5>
+                                                                                                <ul>
+                                                                                                    <li><strong>Professional Environments:</strong> Adaptations for workplace requirements
+                                                                                                        while maintaining modesty</li>
+                                                                                                    <li><strong>Sports and Physical Activities:</strong> Development of sports hijabs and
+                                                                                                        modest activewear</li>
+                                                                                                    <li><strong>Fashion Industry:</strong> Growth of modest fashion designers and brands
+                                                                                                    </li>
+                                                                                                    <li><strong>Legal Restrictions:</strong> Navigating dress codes in countries with
+                                                                                                        restrictions on religious attire</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Beyond Clothing: Comprehensive Modesty</h5>
+                                                                                                <p>Islamic modesty extends beyond clothing to encompass:</p>
+                                                                                                <ul>
+                                                                                                    <li>Speech and communication</li>
+                                                                                                    <li>Behavior in public and private</li>
+                                                                                                    <li>Social media presence and online interactions</li>
+                                                                                                    <li>Avoidance of ostentation and showing off</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                    
+                                                                                <!-- Marriage in Islam -->
+                                                                                <div class="accordion-item">
+                                                                                    <h2 class="accordion-header" id="marriageHeading">
+                                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                                                            data-bs-target="#marriageCollapse" aria-expanded="false" aria-controls="marriageCollapse">
+                                                                                            Marriage in Islam: Rights and Responsibilities
+                                                                                        </button>
+                                                                                    </h2>
+                                                                                    <div id="marriageCollapse" class="accordion-collapse collapse" aria-labelledby="marriageHeading">
+                                                                                        <div class="accordion-body">
+                                                                                            <div class="basic-content">
+                                                                                                <h4>Marriage in Islam</h4>
+                                                                                                <p>Marriage (Nikah) in Islam is a sacred covenant and an act of worship. It is strongly
+                                                                                                    encouraged for Muslims who are able to fulfill its responsibilities.</p>
+                                                                    
+                                                                                                <h5>Essential Components</h5>
+                                                                                                <ul>
+                                                                                                    <li>Offer and acceptance between bride and groom</li>
+                                                                                                    <li>Witnesses (usually two)</li>
+                                                                                                    <li>Mahr (gift from husband to wife)</li>
+                                                                                                    <li>Consent of both parties</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Rights and Responsibilities</h5>
+                                                                                                <p><strong>Husband's responsibilities:</strong></p>
+                                                                                                <ul>
+                                                                                                    <li>Financial provision for the family</li>
+                                                                                                    <li>Kind and respectful treatment</li>
+                                                                                                    <li>Protecting the family</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <p><strong>Wife's responsibilities:</strong></p>
+                                                                                                <ul>
+                                                                                                    <li>Cooperating in managing household affairs</li>
+                                                                                                    <li>Respecting husband's leadership role</li>
+                                                                                                    <li>Protecting family's honor and privacy</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <p><strong>Mutual responsibilities:</strong></p>
+                                                                                                <ul>
+                                                                                                    <li>Love, compassion, and mercy</li>
+                                                                                                    <li>Fidelity and loyalty</li>
+                                                                                                    <li>Raising children as righteous Muslims</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                    
+                                                                                            <div class="advanced-content" style="display: none;">
+                                                                                                <h4>Detailed Exposition of Islamic Matrimonial Jurisprudence</h4>
+                                                                    
+                                                                                                <h5>Historical and Theological Context</h5>
+                                                                                                <p>Marriage in Islam revolutionized pre-Islamic practices by:</p>
+                                                                                                <ul>
+                                                                                                    <li>Establishing women's explicit consent as mandatory</li>
+                                                                                                    <li>Giving women rights to property and mahr</li>
+                                                                                                    <li>Limiting polygyny with strict conditions of justice</li>
+                                                                                                    <li>Providing mechanisms for dispute resolution and divorce</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Legal Framework of Islamic Marriage</h5>
+                                                                                                <ol>
+                                                                                                    <li><strong>Prerequisites:</strong>
+                                                                                                        <ul>
+                                                                                                            <li>Legal capacity (baligh and 'aqil - mature and sane)</li>
+                                                                                                            <li>No prohibited relationship (blood, fosterage, marriage)</li>
+                                                                                                            <li>No existing marriage ties that would prevent the union</li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                    <li><strong>Formal Elements (Arkan):</strong>
+                                                                                                        <ul>
+                                                                                                            <li>Ijab and Qabul (verbal offer and acceptance)</li>
+                                                                                                            <li>Wali (guardian for the bride in most schools)</li>
+                                                                                                            <li>Witnesses (two trustworthy Muslims)</li>
+                                                                                                            <li>Mahr (obligatory gift to bride, her exclusive property)</li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                    <li><strong>Marriage Contract:</strong>
+                                                                                                        <ul>
+                                                                                                            <li>Can include additional conditions not contradicting Shariah</li>
+                                                                                                            <li>May specify wife's right to work, study, or travel</li>
+                                                                                                            <li>Can address property division, residence arrangements</li>
+                                                                                                            <li>Might include delegated right of divorce (talaq al-tafwid)</li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ol>
+                                                                    
+                                                                                                <h5>Rights Framework in Classical Fiqh</h5>
+                                                                                                <p><strong>Wife's Exclusive Rights:</strong></p>
+                                                                                                <ul>
+                                                                                                    <li>Mahr (bridal gift) - immediate or deferred</li>
+                                                                                                    <li>Financial maintenance (nafaqa) including food, clothing, shelter</li>
+                                                                                                    <li>Good treatment (mu'asharah bil-ma'ruf)</li>
+                                                                                                    <li>Conjugal relations</li>
+                                                                                                    <li>Privacy and personal space</li>
+                                                                                                    <li>Education and religious instruction</li>
+                                                                                                    <li>Visiting family and maintaining family ties</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <p><strong>Husband's Rights:</strong></p>
+                                                                                                <ul>
+                                                                                                    <li>Obedience in lawful matters (ta'ah)</li>
+                                                                                                    <li>Protection of property and honor</li>
+                                                                                                    <li>Primary authority in family decisions (qiwamah)</li>
+                                                                                                    <li>Intimacy and companionship</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Contemporary Approaches to Islamic Marriage</h5>
+                                                                                                <ul>
+                                                                                                    <li><strong>Shifting from Rights to Ethics:</strong> Emphasis on virtue ethics (akhlaq)
+                                                                                                        over legalistic rights</li>
+                                                                                                    <li><strong>Companionate Model:</strong> Based on Prophet's example of mutual
+                                                                                                        consultation and partnership</li>
+                                                                                                    <li><strong>Contextualization:</strong> Reinterpreting classical rulings in light of
+                                                                                                        changed social conditions</li>
+                                                                                                    <li><strong>Legal Integration:</strong> Harmonizing Islamic principles with civil legal
+                                                                                                        systems</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                    
+                                                                                <!-- Family Relationships -->
+                                                                                <div class="accordion-item">
+                                                                                    <h2 class="accordion-header" id="familyRelationsHeading">
+                                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                                                            data-bs-target="#familyRelationsCollapse" aria-expanded="false"
+                                                                                            aria-controls="familyRelationsCollapse">
+                                                                                            Family Relationships in Islam
+                                                                                        </button>
+                                                                                    </h2>
+                                                                                    <div id="familyRelationsCollapse" class="accordion-collapse collapse"
+                                                                                        aria-labelledby="familyRelationsHeading">
+                                                                                        <div class="accordion-body">
+                                                                                            <div class="basic-content">
+                                                                                                <h4>The Islamic Family Structure</h4>
+                                                                                                <p>Islam places great emphasis on family as the foundation of society and individual
+                                                                                                    well-being.</p>
+                                                                    
+                                                                                                <h5>Parent-Child Relationships</h5>
+                                                                                                <p><strong>Parents' responsibilities:</strong></p>
+                                                                                                <ul>
+                                                                                                    <li>Providing for children's physical needs</li>
+                                                                                                    <li>Islamic education and moral upbringing</li>
+                                                                                                    <li>Kind and compassionate treatment</li>
+                                                                                                    <li>Fair treatment among siblings</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <p><strong>Children's responsibilities:</strong></p>
+                                                                                                <ul>
+                                                                                                    <li>Respecting and honoring parents</li>
+                                                                                                    <li>Obedience in all matters not contrary to Islam</li>
+                                                                                                    <li>Caring for parents in their old age</li>
+                                                                                                    <li>Continuing to honor them after death through prayers and charity</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Extended Family Relations</h5>
+                                                                                                <ul>
+                                                                                                    <li>Maintaining ties with relatives (silat al-rahm)</li>
+                                                                                                    <li>Special respect for elders</li>
+                                                                                                    <li>Caring for orphans and vulnerable family members</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                    
+                                                                                            <div class="advanced-content" style="display: none;">
+                                                                                                <h4>Comprehensive Analysis of Islamic Family Dynamics</h4>
+                                                                    
+                                                                                                <h5>Quranic Foundation for Family Relations</h5>
+                                                                                                <ul>
+                                                                                                    <li><strong>Quran 17:23-24:</strong> Commands excellence towards parents, especially in
+                                                                                                        their old age</li>
+                                                                                                    <li><strong>Quran 31:14:</strong> Acknowledges mother's sacrifices during pregnancy and
+                                                                                                        nursing</li>
+                                                                                                    <li><strong>Quran 4:36:</strong> Enjoins good treatment of relatives, orphans, and those
+                                                                                                        in need</li>
+                                                                                                    <li><strong>Quran 25:74:</strong> Believers pray for righteous spouses and children</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Islamic Intergenerational Ethics</h5>
+                                                                                                <ol>
+                                                                                                    <li><strong>Hierarchy with Compassion:</strong> Authority balanced with mercy and
+                                                                                                        consultation</li>
+                                                                                                    <li><strong>Reciprocal Care:</strong> Parents care for children in youth; children care
+                                                                                                        for parents in old age</li>
+                                                                                                    <li><strong>Lifelong Bonds:</strong> Family relationships transcend physical separation
+                                                                                                        and even death</li>
+                                                                                                    <li><strong>Communal Responsibility:</strong> Extended family supports orphans, widows,
+                                                                                                        and vulnerable members</li>
+                                                                                                </ol>
+                                                                    
+                                                                                                <h5>Islamic Approaches to Child-Rearing</h5>
+                                                                                                <p>Prophet Muhammad ﷺ exemplified a developmental approach to raising children:</p>
+                                                                                                <ul>
+                                                                                                    <li><strong>Ages 0-7:</strong> Period of love and nurturing with minimal restrictions
+                                                                                                    </li>
+                                                                                                    <li><strong>Ages 7-14:</strong> Teaching and discipline phase with structured guidance
+                                                                                                    </li>
+                                                                                                    <li><strong>Ages 14+:</strong> Friendship and counsel stage with increasing autonomy
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                                <p>Key parenting principles include:</p>
+                                                                                                <ul>
+                                                                                                    <li>Modeling behavior rather than merely instructing</li>
+                                                                                                    <li>Balancing love with discipline</li>
+                                                                                                    <li>Recognizing each child's unique temperament</li>
+                                                                                                    <li>Teaching by stages according to developmental readiness</li>
+                                                                                                    <li>Preparing children for social and economic independence</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Rights of Relatives (Huquq al-Arhaam)</h5>
+                                                                                                <p>Islam establishes specific rights and priorities in family relations:</p>
+                                                                                                <ul>
+                                                                                                    <li><strong>Mahram vs. Non-Mahram:</strong> Different interaction guidelines based on
+                                                                                                        marriageability</li>
+                                                                                                    <li><strong>Order of Financial Responsibility:</strong> Defined hierarchy for who
+                                                                                                        supports whom in need</li>
+                                                                                                    <li><strong>Inheritance System:</strong> Fixed shares ensuring support across
+                                                                                                        generations</li>
+                                                                                                    <li><strong>Order in Prayer and Leadership:</strong> Family hierarchies reflected in
+                                                                                                        ritual practices</li>
+                                                                                                </ul>
+                                                                    
+                                                                                                <h5>Contemporary Family Challenges</h5>
+                                                                                                <p>Muslim families today navigate issues such as:</p>
+                                                                                                <ul>
+                                                                                                    <li>Balancing traditional values with changing social norms</li>
+                                                                                                    <li>Geographic separation due to migration and globalization</li>
+                                                                                                    <li>Intergenerational cultural gaps in immigrant communities</li>
+                                                                                                    <li>Economic pressures requiring dual incomes</li>
+                                                                                                    <li>Technology's impact on family communication and boundaries</li>
+                                                                                                    <li>Harmonizing Islamic family values with diverse legal systems</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                        
+<!-- JavaScript for toggle functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const basicModeBtn = document.getElementById('basicModeBtn');
+    const advancedModeBtn = document.getElementById('advancedModeBtn');
+    const basicContents = document.querySelectorAll('.basic-content');
+    const advancedContents = document.querySelectorAll('.advanced-content');
+    
+    basicModeBtn.addEventListener('click', function() {
+        basicModeBtn.classList.add('active');
+        advancedModeBtn.classList.remove('active');
+        
+        basicContents.forEach(content => {
+            content.style.display = 'block';
+        });
+        
+        advancedContents.forEach(content => {
+            content.style.display = 'none';
+        });
+    });
+    
+    advancedModeBtn.addEventListener('click', function() {
+        advancedModeBtn.classList.add('active');
+        basicModeBtn.classList.remove('active');
+        
+        advancedContents.forEach(content => {
+            content.style.display = 'block';
+        });
+        
+        // Optional: You can hide basic content when showing advanced
+        // uncomment the following if you want this behavior
+        
+        basicContents.forEach(content => {
+            content.style.display = 'none';
+        });
+        
+    });
+
+    
+});
+</script>
+{% endblock %}

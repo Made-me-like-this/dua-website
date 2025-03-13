@@ -1,0 +1,80 @@
+
+{% extends 'myapp/base.html' %}
+
+{% block title %}{{ dua.title }} - Dua{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'myapp:index' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'myapp:categories' %}">Categories</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'myapp:category_detail' dua.category.id %}">{{ dua.category.name }}</a></li>
+            <li class="breadcrumb-item active">{{ dua.title }}</li>
+        </ol>
+    </nav>
+    
+    <div class="card dua-card">
+        <div class="card-body">
+            <h2 class="card-title mb-4">{{ dua.title }}</h2>
+            
+            <div class="p-4 bg-light rounded mb-4">
+                <div class="arabic-text" style="font-size: 2rem;">{{ dua.arabic_text }}</div>
+            </div>
+            
+            <div class="mb-4">
+                <h5><i class="fas fa-language me-2"></i>Transliteration</h5>
+                <p class="lead">{{ dua.transliteration }}</p>
+            </div>
+            
+            <div class="mb-4">
+                <h5><i class="fas fa-book me-2"></i>Translation</h5>
+                <p class="lead">{{ dua.translation }}</p>
+            </div>
+            
+            {% if dua.benefit %}
+            <div class="mb-4">
+                <h5><i class="fas fa-heart me-2"></i>Benefits</h5>
+                <p>{{ dua.benefit }}</p>
+            </div>
+            {% endif %}
+            
+            {% if dua.reference %}
+            <div>
+                <h5><i class="fas fa-quote-left me-2"></i>Reference</h5>
+                <p class="text-muted">{{ dua.reference }}</p>
+            </div>
+            {% endif %}
+            
+            <div class="mt-4 d-flex justify-content-between">
+                <a href="{% url 'myapp:category_detail' dua.category.id %}" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Category
+                </a>
+                <button class="btn btn-success" onclick="copyDua()">
+                    <i class="fas fa-copy me-2"></i>Copy Dua
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function copyDua() {
+    const duaText = `
+${document.querySelector('.arabic-text').innerText}
+
+Transliteration: ${document.querySelectorAll('.lead')[0].innerText}
+
+Translation: ${document.querySelectorAll('.lead')[1].innerText}
+
+Reference: {{ dua.reference }}
+    `.trim();
+    
+    navigator.clipboard.writeText(duaText).then(() => {
+        alert('Dua copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+</script>
+{% endblock %}

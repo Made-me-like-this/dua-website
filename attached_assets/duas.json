@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "Dua before sleeping",
+    "arabic": "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
+    "transliteration": "Bismika Allahumma amootu wa ahya",
+    "translation": "In Your name, O Allah, I die and I live.",
+    "reference": "Bukhari",
+    "audio_file": "dua_sleep.mp3",
+    "categories": ["sleeping", "night"]
+  },
+  {
+    "id": 2,
+    "title": "Dua upon waking up",
+    "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+    "transliteration": "Alhamdu lillahil-ladhi ahyana ba'da ma amatana wa ilaihin-nushur",
+    "translation": "Praise is to Allah Who gives us life after He has caused us to die and to Him is the return.",
+    "reference": "Bukhari",
+    "audio_file": "dua_wakeup.mp3",
+    "categories": ["waking up", "morning"]
+  },
+  {
+    "id": 3,
+    "title": "Dua when angry",
+    "arabic": "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+    "transliteration": "A'udhu billahi minash-shaytanir-rajim",
+    "translation": "I seek refuge with Allah from Satan, the accursed.",
+    "reference": "Bukhari and Muslim",
+    "audio_file": "dua_angry.mp3",
+    "categories": ["angry", "protection"]
+  },
+  {
+    "id": 4,
+    "title": "Dua for Taraweeh",
+    "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِرِضَاكَ مِنْ سَخَطِكَ، وَبِمُعَافَاتِكَ مِنْ عُقُوبَتِكَ، وَأَعُوذُ بِكَ مِنْكَ، لَا أُحْصِي ثَنَاءً عَلَيْكَ، أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ",
+    "transliteration": "Allahumma inni a'udhu bi-ridaka min sakhatika, wa bi-mu'afatika min 'uqubatika, wa a'udhu bika minka, la uhsi thana'an 'alayka, anta kama athnayta 'ala nafsika",
+    "translation": "O Allah, I seek protection in Your pleasure from Your anger, and in Your forgiveness from Your punishment. I seek protection in You from You. I cannot count Your praises. You are as You have praised Yourself.",
+    "reference": "Muslim",
+    "audio_file": "dua_taraweeh.mp3",
+    "categories": ["taraweeh", "ramadan", "prayer"]
+  },
+  {
+    "id": 5,
+    "title": "Dua for entering the masjid",
+    "arabic": "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+    "transliteration": "Allahumma iftah li abwaba rahmatika",
+    "translation": "O Allah, open the gates of Your mercy for me.",
+    "reference": "Muslim",
+    "audio_file": "dua_enter_masjid.mp3",
+    "categories": ["masjid", "mosque"]
+  },
+  {
+    "id": 6,
+    "title": "Dua for leaving the masjid",
+    "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+    "transliteration": "Allahumma inni as'aluka min fadlika",
+    "translation": "O Allah, I ask You for Your bounty.",
+    "reference": "Muslim",
+    "audio_file": "dua_leave_masjid.mp3",
+    "categories": ["masjid", "mosque"]
+  },
+  {
+    "id": 7,
+    "title": "Dua before eating",
+    "arabic": "بِسْمِ اللَّهِ",
+    "transliteration": "Bismillah",
+    "translation": "In the name of Allah.",
+    "reference": "Abu Dawud",
+    "audio_file": "dua_before_eating.mp3",
+    "categories": ["food", "eating"]
+  },
+  {
+    "id": 8,
+    "title": "Dua after eating",
+    "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا، وَرَزَقَنِيهِ، مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
+    "transliteration": "Alhamdu lillahil-ladhi at'amani hadha, wa razaqanihi, min ghayri hawlin minni wa la quwwatin",
+    "translation": "Praise is to Allah Who has fed me this and provided it for me without any might or power on my part.",
+    "reference": "Abu Dawud, Tirmidhi",
+    "audio_file": "dua_after_eating.mp3",
+    "categories": ["food", "eating", "gratitude"]
+  },
+  {
+    "id": 9,
+    "title": "Dua for anxiety and sorrow",
+    "arabic": "اللَّهُمَّ إِنِّي عَبْدُكَ، ابْنُ عَبْدِكَ، ابْنُ أَمَتِكَ، نَاصِيَتِي بِيَدِكَ، مَاضٍ فِيَّ حُكْمُكَ، عَدْلٌ فِيَّ قَضَاؤُكَ، أَسْأَلُكَ بِكُلِّ اسْمٍ هُوَ لَكَ، سَمَّيْتَ بِهِ نَفْسَكَ، أَوْ أَنْزَلْتَهُ فِي كِتَابِكَ، أَوْ عَلَّمْتَهُ أَحَدًا مِنْ خَلْقِكَ، أَوِ اسْتَأْثَرْتَ بِهِ فِي عِلْمِ الْغَيْبِ عِنْدَكَ، أَنْ تَجْعَلَ الْقُرْآنَ رَبِيعَ قَلْبِي، وَنُورَ صَدْرِي، وَجَلَاءَ حُزْنِي، وَذَهَابَ هَمِّي",
+    "transliteration": "Allahumma inni 'abduka, ibnu 'abdika, ibnu amatika, nasiyati biyadika, madin fiyya hukmuka, 'adlun fiyya qada'uka, as'aluka bikulli ismin huwa laka, sammayta bihi nafsaka, aw anzaltahu fi kitabika, aw 'allamtahu ahadan min khalqika, aw ista'tharta bihi fi 'ilmil-ghaybi 'indaka, an taj'alal-Qur'ana rabi'a qalbi, wa nura sadri, wa jala'a huzni, wa dhahaba hammi",
+    "translation": "O Allah, I am Your slave, son of Your slave, son of Your maidservant, my forelock is in Your hand, Your command over me is forever executed and Your decree over me is just. I ask You by every name belonging to You which You named Yourself with, or revealed in Your Book, or You taught to any of Your creation, or You have preserved in the knowledge of the unseen with You, that You make the Quran the life of my heart and the light of my breast, and a departure for my sorrow and a release for my anxiety.",
+    "reference": "Ahmad",
+    "audio_file": "dua_anxiety.mp3",
+    "categories": ["anxiety", "sorrow", "depression", "mental health"]
+  },
+  {
+    "id": 10,
+    "title": "Sayyid-ul-Istighfar (The Master of Seeking Forgiveness)",
+    "arabic": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
+    "transliteration": "Allahumma anta Rabbi la ilaha illa anta, Khalaqtani wa ana 'abduka, wa ana 'ala 'ahdika wa wa'dika ma istata'tu, A'udhu bika min sharri ma sana'tu, abu'u laka bi ni'matika 'alayya, wa abu'u bi dhanbi faghfir li fa innahu la yaghfiru adh-dhunuba illa anta",
+    "translation": "O Allah, You are my Lord, there is no god but You, You created me and I am Your servant, and I abide by Your covenant and promise as best I can, I seek refuge in You from the evil of what I have done, I acknowledge Your favor upon me, and I acknowledge my sin, so forgive me, for none forgives sins but You.",
+    "reference": "Bukhari",
+    "audio_file": "dua_istighfar.mp3",
+    "categories": ["forgiveness", "morning", "evening", "repentance"]
+  },
+  {
+    "id": 11,
+    "title": "Dua for protection (morning and evening)",
+    "arabic": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+    "transliteration": "Bismillahil-ladhi la yadurru ma'asmihi shay'un fil-ardi wa la fis-sama'i, wa huwas-Sami'ul-'Alim",
+    "translation": "In the name of Allah with Whose name nothing can harm on earth or in heaven, and He is the All-Hearing, the All-Knowing.",
+    "reference": "Abu Dawud, Tirmidhi",
+    "audio_file": "dua_protection.mp3",
+    "categories": ["protection", "morning", "evening"]
+  },
+  {
+    "id": 12,
+    "title": "Dua while breaking fast",
+    "arabic": "ذَهَبَ الظَّمَأُ، وَابْتَلَّتِ الْعُرُوقُ، وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللَّهُ",
+    "transliteration": "Dhahabazh-zhama'u wabtallatil 'urooqu, wa thabatal-ajru insha'Allah",
+    "translation": "The thirst has gone, the veins are moistened, and the reward is confirmed, if Allah wills.",
+    "reference": "Abu Dawud",
+    "audio_file": "dua_breaking_fast.mp3",
+    "categories": ["fasting", "ramadan", "iftar"]
+  },
+  {
+    "id": 13,
+    "title": "Dua before starting Salah",
+    "arabic": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+    "transliteration": "Subhanakal-lahumma wa bihamdika, wa tabarakasmuka, wa ta'ala jadduka, wa la ilaha ghayruk",
+    "translation": "Glory is to You, O Allah, and praise, blessed is Your name, exalted is Your majesty, and there is no deity other than You.",
+    "reference": "Abu Dawud, Tirmidhi",
+    "audio_file": "dua_start_salah.mp3",
+    "categories": ["prayer", "salah"]
+  },
+  {
+    "id": 14,
+    "title": "Dua for seeking guidance (Istikhara)",
+    "arabic": "اللَّهُمَّ إِنِّي أَسْتَخِيرُكَ بِعِلْمِكَ، وَأَسْتَقْدِرُكَ بِقُدْرَتِكَ، وَأَسْأَلُكَ مِنْ فَضْلِكَ الْعَظِيمِ، فَإِنَّكَ تَقْدِرُ وَلاَ أَقْدِرُ، وَتَعْلَمُ وَلاَ أَعْلَمُ، وَأَنْتَ عَلاَّمُ الْغُيُوبِ، اللَّهُمَّ إِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الأَمْرَ خَيْرٌ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي - أَوْ قَالَ: عَاجِلِ أَمْرِي وَآجِلِهِ - فَاقْدُرْهُ لِي وَيَسِّرْهُ لِي، ثُمَّ بَارِكْ لِي فِيهِ، وَإِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الأَمْرَ شَرٌّ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي - أَوْ قَالَ: عَاجِلِ أَمْرِي وَآجِلِهِ - فَاصْرِفْهُ عَنِّي وَاصْرِفْنِي عَنْهُ، وَاقْدُرْ لِي الْخَيْرَ حَيْثُ كَانَ، ثُمَّ أَرْضِنِي بِهِ",
+    "transliteration": "Allahumma inni astakhiruka bi'ilmika, wa astaqdiruka biqudratika, wa as'aluka min fadlikal-'azim, fa'innaka taqdiru wa la aqdiru, wa ta'lamu wa la a'lamu, wa anta 'allamul-ghuyub. Allahumma in kunta ta'lamu anna hadhal-amra khayrun li fi dini wa ma'ashi wa 'aqibati amri (or: fi 'ajili amri wa ajilihi) faqdurhu li wa yassirhu li, thumma barik li fihi, wa in kunta ta'lamu anna hadhal-amra sharrun li fi dini wa ma'ashi wa 'aqibati amri (or: fi 'ajili amri wa ajilihi) fasrifhu 'anni wasrifni 'anhu, waqdir liyal-khayra haythu kana, thumma ardini bihi",
+    "translation": "O Allah, I seek Your guidance by virtue of Your knowledge, and I seek ability by virtue of Your power, and I ask You of Your great bounty. For You have power, while I have none, and You have knowledge, while I know not, and You are the Knower of hidden things. O Allah, if in Your knowledge this affair is good for me in my religion, my livelihood, and the consequence of my affair (or: in the immediate and later implications of my affair), then decree it for me, facilitate it for me, and bless me in it. And if in Your knowledge this affair is bad for me in my religion, my livelihood, and the consequence of my affair (or: in the immediate and later implications of my affair), then turn it away from me, and turn me away from it, and decree for me what is good wherever it may be, and make me content with it.",
+    "reference": "Bukhari",
+    "audio_file": "dua_istikhara.mp3",
+    "categories": ["decision making", "guidance", "istikhara"]
+  },
+  {
+    "id": 15,
+    "title": "Dua for travelling",
+    "arabic": "اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ، اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا الْبِرَّ وَالتَّقْوَى، وَمِنَ الْعَمَلِ مَا تَرْضَى، اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا وَاطْوِ عَنَّا بُعْدَهُ، اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ، وَالْخَلِيفَةُ فِي الْأَهْلِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ، وَكَآبَةِ الْمَنْظَرِ، وَسُوءِ الْمُنْقَلَبِ فِي الْمَالِ وَالْأَهْلِ",
+    "transliteration": "Allahu akbar, Allahu akbar, Allahu akbar. Subhanal-ladhi sakhkhara lana hadha wa ma kunna lahu muqrinin, wa inna ila rabbina lamunqalibun. Allahumma inna nas'aluka fi safarina hadha al-birra wat-taqwa, wa minal-'amali ma tarda. Allahumma hawwin 'alayna safarana hadha watwi 'anna bu'dahu. Allahumma antas-sahibu fis-safari, wal-khalifatu fil-ahli. Allahumma inni a'udhu bika min wa'tha'is-safari, wa ka'abatil-manzari, wa su'il-munqalabi fil-mali wal-ahli",
+    "translation": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. Glory to Him Who has provided this for us though we could never have had it by our efforts. Surely, unto our Lord we are returning. O Allah, we ask You on this journey of ours for righteousness and piety, and deeds which please You. O Allah, facilitate our journey and let us cover its distance quickly. O Allah, You are the Companion in the journey, and the Successor (the One Who guards them in a person's absence) over the family. O Allah, I seek refuge with You from the difficulties of travel, from having a change of heart, and from being overcome with grief to the family and property.",
+    "reference": "Muslim",
+    "audio_file": "dua_travel.mp3",
+    "categories": ["travel", "journey", "protection"]
+  },
+  {
+    "id": 16,
+    "title": "Dua e Qunoot(recited in witr prayer) - Shafi",
+    "arabic": "no arabic at the moment",
+    "transliteration": "Allahumma ihdini feeman hadayt, wa a’fini fiman afait, wa tawallani fiman tawallait, wa barik Li fima atait, wa qini sharra ma qadait, fa Innaka taqdi wa la yuqda Alaik, wa innahu la yadhillu man walait, Wa lā ya’izzu man ‘ādait, tabarakta Rabbana wa ta’alait",
+    "translation": "O Allah guide me among those You have guided, pardon me among those You have pardoned, befriend me among those You have befriended, bless me in what You have granted, and save me from the evil that You decreed. Indeed You decree, and none can pass decree, and none can pass decree upon You, indeed he is not humiliated whom You have befriended, blessed are You our Lord and Exalted.",
+    "reference": "At-Tirmidhi: 464, Abu Dawud: 1425",
+    "audio_file": "dua_qunoot1.mp3",
+    "categories": ["taraweeh", "witr", "prayer"]
+  },
+  {
+    "id": 16,
+    "title": "Dua e Qunoot (recited in Witr prayer) - Hanafi",
+    "arabic": "‫ك‫كِۡ �ۡ‫ُن‬‫َو‬ ‫ك‬‫ُن‬�ۡ‫ِع‬‫َت‬‫ۡس‬‫َن‬ ‫ا‬َ‫ّن‬ ِ‫ا‬ ‫م‬َّ ‫ُه‬َّ ‫ل‬‫ل‬َ ‫ا‬‫ِب‬ ‫ُن‬‫ِم‬‫ۡؤ‬‫ُن‬‫َو‬ ‫َك‬‫ُر‬‫ِف‬‫ْغ‬‫َت‬‫ۡس‬‫َن‬‫َو‬ ‫ك‫ۡي‬َ ‫ل‬َ� ‫ُل‬َّ �‫َو‬‫َت‬‫َن‬‫َو‬ ‫ك‫ۡي‬َ ‫ل‬َ� ‫نى‬‫َن‬ ‫َلا‬‫َو‬ ‫َك‬‫ُر‬‫ُك‬‫ۡش‬‫َن‬‫َو‬ ‫ير‬‫ُد‬‫ُب‬‫ۡع‬‫َن‬ ‫َك‬‫ا‬َ‫ّي‬ ِ‫ا‬ ‫م‬َّ ‫ُه‬َّ ‫ل‬‫ل‬َ ‫ا‬ .‫َك‬‫ُر‬‫ُج‬‫ۡف‬َ‫ّي‬ ‫ۡن‬‫َم‬ ‫ُك‬‫ترۡ ‫َن‬‫َو‬ ‫ُع‬َ ‫ل‬‫ۡخ‬‫َن‬‫َو‬ ‫َك‬‫ُر‬‫ُف‬‫لج‬‬ۡ ‫َخ‬ۡ‫ل‬‫ٱ‫ك‬‫َب‬ ‫ا‬‫َذ‬َ� �ٰ‫ۡخ‬‫َن‬‫َو‬ ‫ك‫َت‬‫َم‬‫ۡح‬‫َر‬ ‫ا‬‫ۡو‬‫ُج‬‫ۡر‬‫َن‬‫و‬ ‫ُد‬‫ِف‬‫ۡح‬‫َن‬‫و‬ �ٰ‫ۡس‬‫َن‬ ‫ك‬‬‫ۡي‬َ‫ل‬ِ‫ا‬‫َو‬ ‫ُد‬‫ُج‬‫ۡس‬‫َن‬‫َو‬ ‫ئ‬ّ ِ‫ل‬‫َص‬‫ُن‬ ‫كَ‫ل‬ ‫َوۡ‫ل‬ ‫ا‬‫ِب‬ ‫ك‫ق‬ٌٌ ‫ِح‬ۡ ‫ل‬‫ُم‬ ‫ِر‬‫ا‬‫ف‬َّ ‫لج‫َب‬ ‫ا‬‫َذ‬َ� ‫ن‬َّ ِ‫ا‬",
+    "transliteration": "Allah humma inna nasta-eenoka wa nastaghfiruka wa nu'minu bika wa natawakkalu alaika wa nusni alaikal khair, wa nashkuruka wala nakfuruka wa nakhla-oo wa natruku mai yafjuruka, Allahnusni alaikal khair, wa nashkuruka wala nakfuruka wa nakhla-oo wa natruku mai yafjuruka, Allah humma iyyaka na'budu wa laka nusalli wa nasjud wa ilaika nas aaa wa nahfizu wa narju rahma taka wa nakhshaa azaabaka inna azaabaka bil kuffari mulhik",
+    "translation": "O Allah! We implore You for help and beg forgiveness of You and believe in You and rely on You and extol You and we are thankful to You and are not ungrateful to You and we alienate and forsake those who disobey You. O Allah! You alone do we worship and for You do we pray and prostrate and we betake to please You and present ourselves for the service in Your cause and we hope for Your mercy and fear Your chastisement. Undoubtedly, Your torment is going to overtake infidels O Allah!",
+    "reference": "As-Sunan Kubra lil-Bayhaqi 2/201",
+    "audio_file": "dua_qunoot2.mp3",
+    "categories": ["taraweeh", "witr", "prayer"]
+  }
+]

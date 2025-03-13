@@ -1,0 +1,79 @@
+
+{% extends 'myapp/base.html' %}
+
+{% block title %}About Dua Collection{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card mb-4">
+                <div class="card-body text-center p-5">
+                    <i class="fas fa-pray fa-4x text-success mb-3"></i>
+                    <h1 class="mb-3">About Dua Collection</h1>
+                    <p class="lead">A comprehensive resource for Muslims to learn and practice duas from the Quran and Sunnah.</p>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="mb-3">Our Mission</h2>
+                    <p>My mission is to provide an accessible, user-friendly platform for Muslims worldwide to access authentic duas for various occasions. I strive to:</p>
+                    <ul>
+                        <li>Collect and present authentic duas from reliable Islamic sources</li>
+                        <li>Make it easy to find duas for specific situations and needs</li>
+                        <li>Provide accurate Arabic text, transliteration, and translation</li>
+                        <li>Educate users about the importance and benefits of making dua</li>
+                        <li>Create a beautiful, responsive interface that makes learning and practicing duas a pleasant experience</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="mb-3">Sources</h2>
+                    <p>The duas in this collection are sourced from:</p>
+                    <ul>
+                        <li>The Holy Quran</li>
+                        <li>Authentic Hadith collections (Sahih Bukhari, Sahih Muslim, etc.)</li>
+                        <li>Hisnul Muslim (Fortress of the Muslim)</li>
+                        <li>Other authentic scholarly works</li>
+                    </ul>
+                    <p>I strive to ensure the accuracy and authenticity of all content on this website. If you find any errors or have suggestions for improvement, please <a href="#contact">contact us</a>.</p>
+                </div>
+            </div>
+            
+            <div class="card mb-4" id="contact">
+                <div class="card-body">
+                    <h2 class="mb-3">Contact Us</h2>
+                    <p>I welcome your feedback, suggestions, and questions. Feel free to reach out to me:</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-envelope fa-2x text-success me-3"></i>
+                        <div>
+                            <h5 class="mb-0">Email</h5>
+                            <p class="mb-0"><a href="mailto: hydrafamilies@gmail.com">hydrafamilies@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-globe fa-2x text-success me-3"></i>
+                        <div>
+                            <h5 class="mb-0">Website</h5>
+                            <p class="mb-0"><a href="https://kawaii.pythonanywhere.com">https://kawaii.pythonanywhere.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="mb-4">Support Our Project</h2>
+                    <p>This website is maintained by volunteers dedicated to spreading beneficial Islamic content. Your support helps me continue the work and expand the collection.</p>
+                    <a href="{% url 'myapp:donate' %}" class="btn btn-success btn-lg">
+                        <i class="fas fa-hand-holding-heart me-2"></i>Donate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

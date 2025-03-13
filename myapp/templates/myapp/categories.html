@@ -1,0 +1,37 @@
+
+{% extends 'myapp/base.html' %}
+
+{% block title %}Dua Categories{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4"><i class="fas fa-folder me-2"></i>Dua Categories</h1>
+    
+    <div class="row">
+        {% if categories %}
+            {% for category in categories %}
+            <div class="col-md-4 mb-4">
+                <a href="{% url 'myapp:category_detail' category.id %}" class="text-decoration-none">
+                    <div class="category-card p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-book-open fa-3x text-success"></i>
+                        </div>
+                        <h4>{{ category.name }}</h4>
+                        <p class="text-muted">{{ category.duas.count }} duas</p>
+                        {% if category.description %}
+                            <p class="small text-muted">{{ category.description|truncatechars:100 }}</p>
+                        {% endif %}
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12">
+                <div class="alert alert-info">
+                    No categories available at the moment.
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

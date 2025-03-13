@@ -1,0 +1,50 @@
+
+{% extends 'myapp/base.html' %}
+
+{% block title %}{{ category.name }} - Duas{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'myapp:index' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'myapp:categories' %}">Categories</a></li>
+            <li class="breadcrumb-item active">{{ category.name }}</li>
+        </ol>
+    </nav>
+    
+    <h1 class="mb-3">{{ category.name }}</h1>
+    {% if category.description %}
+        <p class="lead mb-4">{{ category.description }}</p>
+    {% endif %}
+    
+    <div class="row">
+        {% if duas %}
+            {% for dua in duas %}
+            <div class="col-lg-6 mb-4">
+                <div class="card dua-card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ dua.title }}</h5>
+                        <div class="arabic-text">{{ dua.arabic_text }}</div>
+                        <p class="card-text"><strong>Transliteration:</strong> {{ dua.transliteration }}</p>
+                        <p class="card-text"><strong>Translation:</strong> {{ dua.translation }}</p>
+                        {% if dua.reference %}
+                            <p class="card-text"><small class="text-muted">{{ dua.reference }}</small></p>
+                        {% endif %}
+                        <a href="{% url 'myapp:dua_detail' dua.id %}" class="btn btn-sm btn-success">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12">
+                <div class="alert alert-info">
+                    No duas available in this category at the moment.
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
