@@ -4,8 +4,8 @@
 {% block title %}Dua Collection - Home{% endblock %}
 
 {% block content %}
-<!-- FAQ Slideshow Section -->
-<div id="faqCarousel" class="carousel slide bg-gradient text-white py-5" data-bs-ride="carousel">
+<!-- FAQ Slideshow Section -->        
+<div id="faqCarousel" class="carousel slide custom-gradient text-white py-5" data-bs-ride="carousel">
     <div class="carousel-inner text-center">
         <div class="carousel-item active">
             <h2>Is it bid'ah to rub the face after dua</h2>
@@ -34,6 +34,14 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </button>
 </div>
+
+<style>
+.custom-gradient {
+    background: linear-gradient(135deg, #198754, #004d40); /* Green to Dark Teal */
+    padding: 40px 0; /* Ensures enough spacing */
+}
+</style>
+
 <div class="hero-section">
     <div class="container text-center">
         <h1><i class="fas fa-pray me-3"></i>Dua Collection</h1>
