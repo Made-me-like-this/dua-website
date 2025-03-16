@@ -1,7 +1,7 @@
 
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Category, Dua
+from .models import Category, Dua, Question
 
 def index(request):
     categories = Category.objects.all()[:5]
