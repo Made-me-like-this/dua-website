@@ -30,7 +30,26 @@ def dua_detail(request, dua_id):
     return render(request, 'myapp/dua_detail.html', {'dua': dua})
 
 def learn(request):
+
     return render(request, 'myapp/learn.html')
+
+
+def questionaires(request):
+    questions = Question.objects.all().order_by('-created_at')
+
+    if request.method == 'POST':
+        if 'question_submit' in request.POST:
+            Question.objects.create(
+                title=request.POST.get('title'),
+                content=request.POST.get('content'),
+                author=request.POST.get('author', 'Anonymous')
+            )
+        elif 'answer_submit' in request.POST:
+            question = Question.objects.get(id=request.POST.get('question_id'))
+            new_answer = f"{request.POST.get('author', 'Anonymous')}: {request.POST.get('answer')}\n"
+            question.answers = question.answers + new_answer
+            question.save()
+    return render(request, 'myapp/q$a.html', {'questions': questions})
 
 def about(request):
     return render(request, 'myapp/about.html')
