@@ -1,0 +1,367 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Learn About Islam and Duas{% endblock %}
+
+{% block content %}
+<div class="hero-section" style="background-color: #0275d8;">
+    <div class="container text-center">
+        <h1><i class="fas fa-graduation-cap me-3"></i>Learn About Islam</h1>
+        <p class="lead">Understanding the fundamentals of Islam and the importance of duas</p>
+    </div>
+</div>
+
+<div class="container mt-4 mb-5">
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <div class="d-flex justify-content-end mb-3">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary "><a href="{% url 'myapp:learn' %}">Back To Learn</a></button>
+                    <button type="button" class="btn btn-outline-primary"><a href="{% url 'myapp:questions' %}">Ask/Answer questions</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Q&A Section -->
+<div class="qa-container">
+    <div class="qa-left">
+        <div class="qa-header">
+            <h3>Ask a Question</h3>
+        </div>
+        <div class="qa-body">
+            <!-- Ask Question Form -->
+            <form method="POST" class="qa-form">
+                {% csrf_token %}
+                <input type="hidden" name="question_submit" value="1">
+                <div class="mb-3">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" name="author" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Question Title</label>
+                    <input type="text" name="title" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Your Question</label>
+                    <textarea name="content" class="form-control" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Ask Question</button>
+            </form>
+
+            <!-- Unanswered Questions -->
+            <h4 class="mt-4">Unanswered Questions</h4>
+            {% for question in questions %}
+                {% if not question.answers %}
+                    <div class="qa-card">
+                        <div class="qa-card-header">
+                            <h5>{{ question.title }}</h5>
+                            <small>Asked by <b>{{ question.author }}</b> on {{ question.created_at|date }}</small>
+                        </div>
+                        <div class="qa-card-body">
+                            <p>{{ question.content }}</p>
+
+                            <!-- Answer Form -->
+                            <form method="POST" class="qa-answer-form">
+                                {% csrf_token %}
+                                <input type="hidden" name="answer_submit" value="1">
+                                <input type="hidden" name="question_id" value="{{ question.id }}">
+                                <div class="mb-2">
+                                    <input type="text" name="author" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="mb-2">
+                                    <textarea name="answer" class="form-control" rows="2" placeholder="Your Answer" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-success">Submit Answer</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="qa-right">
+        <div class="qa-header answered-header">
+            <h3>Answered Questions</h3>
+        </div>
+        <div class="qa-body">
+            {% for question in questions %}
+                {% if question.answers %}
+                    <div class="qa-card">
+                        <div class="qa-card-header">
+                            <h5>{{ question.title }}</h5>
+                            <small>Asked by <b>{{ question.author }}</b> on {{ question.created_at|date }}</small>
+                        </div>
+                        <div class="qa-card-body">
+                            <p>{{ question.content }}</p>
+                            <h6 class="answers-title">Answers:</h6>
+                            <div class="qa-answers">
+                                {% for answer in question.answers.splitlines %}
+                                    {% if answer %}
+                                        <div class="qa-answer">{{ answer }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Custom Styling -->
+<style>
+    /* Q&A Section Styles with Enhanced Mobile Support */
+.qa-container {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.qa-left, .qa-right {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.qa-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+}
+
+.qa-header h3 {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.answered-header {
+  background-color: #e8f4ff;
+}
+
+.qa-body {
+  padding: 20px;
+}
+
+.qa-form .form-label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #555;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  -webkit-appearance: none; /* Removes default styling on iOS */
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+textarea.form-control {
+  min-height: 80px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  -webkit-appearance: none; /* Removes default styling on iOS */
+}
+
+.btn-primary {
+  background-color: #3f84e5;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2e6ec7;
+}
+
+.btn-primary:active {
+  background-color: #2261b5;
+  transform: translateY(1px);
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-success:active {
+  background-color: #1e7e34;
+  transform: translateY(1px);
+}
+
+.btn-sm {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-3 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.qa-card {
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.qa-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.qa-card-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fcfcfc;
+  border-radius: 6px 6px 0 0;
+}
+
+.qa-card-header h5 {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+  color: #333;
+  word-break: break-word;
+}
+
+.qa-card-header small {
+  color: #777;
+  font-size: 0.825rem;
+  display: block;
+}
+
+.qa-card-body {
+  padding: 15px;
+}
+
+.qa-card-body p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #444;
+  word-break: break-word;
+}
+
+.answers-title {
+  margin: 15px 0 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.qa-answers {
+  max-height: 250px;
+  overflow-y: auto;
+  border-left: 3px solid #3f84e5;
+  padding-left: 12px;
+}
+
+.qa-answer {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.qa-answer:last-child {
+  border-bottom: none;
+}
+
+.qa-answer-form {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #ddd;
+}
+
+/* Enhanced Responsive adjustments */
+@media (max-width: 992px) {
+  .qa-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .qa-left, .qa-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .qa-body {
+    padding: 15px 12px;
+  }
+
+  .qa-header {
+    padding: 12px 15px;
+  }
+
+  .qa-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    width: 100%; /* Full width buttons on very small screens */
+    padding: 10px 16px;
+  }
+
+  .form-control {
+    font-size: 16px; /* Prevents iOS zoom on input */
+    padding: 10px;
+  }
+
+  .qa-card-header h5 {
+    font-size: 1rem;
+  }
+}
+
+/* Fix for iOS form elements */
+@supports (-webkit-overflow-scrolling: touch) {
+  select,
+  textarea,
+  input[type="text"] {
+    font-size: 16px; /* Prevents zoom on focus in iOS */
+  }
+}
+
+/* Improve touch targets */
+.qa-card, .btn, .form-control {
+  touch-action: manipulation;
+}
+</style>
+{% endblock %}
