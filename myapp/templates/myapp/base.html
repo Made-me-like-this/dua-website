@@ -94,6 +94,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f8f9fa;
+            text-align: center;
+            margin-top: 50px;
         }
         .navbar {
             background-color: #28a745;
@@ -158,6 +160,11 @@
     background: linear-gradient(135deg, #198754, #004d40); /* Green to Dark Teal */
     padding: 40px 0; /* Ensures enough spacing */
 }
+        
+        .countdown {
+            font-size: 2em;
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
@@ -190,7 +197,8 @@
             </div>
         </div>
     </nav>
-<!-- FAQ Slideshow Section -->        
+<!-- FAQ Slideshow Section -->       
+    <!--
 <div id="faqCarousel" class="carousel slide custom-gradient text-white py-5" data-bs-ride="carousel">
     <div class="carousel-inner text-center">
         <div class="carousel-item active">
@@ -218,9 +226,12 @@
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#faqCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-</div>
+    </button>-
+</div> -->
+    <h1>This website will be disabled after 19 days from now. Use the donate section if you want to keep it running</h1>
+<div class="countdown" id="countdown"></div>
 
+   
     <a href="{% url 'myapp:donate' %}" class="btn btn-warning donate-btn">
         <i class="fas fa-hand-holding-heart me-2"></i>Donate
     </a>
@@ -260,5 +271,36 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="{% static 'bootstrap.min.js' %}">
+     <script>
+        // Set the date 19 days from now
+    const countdownDate = new Date();
+    countdownDate.setDate(countdownDate.getDate() + 19);
+
+    // Update the countdown every second
+    const x = setInterval(function() {
+
+        // Get the current date and time
+        const now = new Date().getTime();
+
+        // Calculate the distance between now and the countdown date
+        const distance = countdownDate - now;
+
+        // Time calculations for days, hours, minutes, and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the countdown element
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        // If the countdown is over, display a message
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "Goodbye!";
+        }
+    }, 1000);
+    </script>
 </body>
 </html>
