@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Populating data..."
+python manage.py populate_data
