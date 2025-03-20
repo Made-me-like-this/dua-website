@@ -70,6 +70,10 @@ class Command(BaseCommand):
             name='Guidance & Decision Making',
             description='Duas for seeking guidance and making decisions'
         )
+        witr = Category.objects.create(
+            name='At night',
+            description='Dua for saying in witr prayers'
+        )
 
         # Original Duas from Python file
         Dua.objects.create(
