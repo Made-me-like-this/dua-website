@@ -229,9 +229,9 @@
     </button>-
 </div> -->
     <div class="slide custom-gradient text-white py-5">
-        <h1>This website will be disabled in 19 days</h1>
-<div class="countdown" id="countdown"></div>
-    </div>
+    <h1>This website will be disabled after <div class="countdown" id="countdown"></div></h1>
+    
+</div>
     
 
    
@@ -275,30 +275,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="{% static 'bootstrap.min.js' %}">
      <script>
-    // Set the countdown date to 19 days from today
-    const countdownDate = new Date();
-    countdownDate.setDate(countdownDate.getDate() + 15);
+    // Set the initial countdown duration (in days)
+    let countdownDays = 15;
+
+    // Get the current time
+    const startTime = new Date().getTime();
 
     // Update the countdown every second
     const x = setInterval(function() {
-        // Get the current date and time
+        // Calculate the elapsed time since the start
         const now = new Date().getTime();
+        const elapsedTime = now - startTime;
 
-        // Calculate the distance between now and the countdown date
-        const distance = countdownDate - now;
+        // Calculate how many full days have passed
+        const daysPassed = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
 
-        // Time calculations for days, hours, minutes, and seconds
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Calculate remaining days
+        const remainingDays = countdownDays - daysPassed;
 
         // Display the result in the countdown element
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
+        document.getElementById("countdown").innerHTML = remainingDays + " days";
 
         // If the countdown is over, display a message
-        if (distance < 0) {
+        if (remainingDays <= 0) {
             clearInterval(x);
             document.getElementById("countdown").innerHTML = "Goodbye!";
         }
